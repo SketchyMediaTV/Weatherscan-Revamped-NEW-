@@ -1,3 +1,4 @@
+<img width="795" height="594" alt="Screenshot_54" src="https://github.com/user-attachments/assets/282e9c04-9cf3-4dfb-8373-ba27a9fec581" />
 # Weatherscan Revamped by SketchyLiy!
 Weatherscan simulation in HTML/JS/CSS
 
