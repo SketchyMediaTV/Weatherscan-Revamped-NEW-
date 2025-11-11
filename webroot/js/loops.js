@@ -1,5 +1,5 @@
 var loopssevereweathermode = false;
-var displayingAtmospheric = true;
+var displayingAtmospheric = false;
 var miniMap;
 function Loops() {
 
@@ -15,11 +15,11 @@ function Loops() {
 		$('#city').text(maincitycoords.displayname);
 		$('#forecast-city').text(maincitycoords.displayname + ':');
 		if (weatherInfo.radarTempUnavialable == false) {
-			if (loopssevereweathermode == true){
+			if (loopssevereweathermode == false){
 				$('#minimap').fadeIn(0)
 				$('#minimap-title').fadeIn(0)
 				minimap.on('load', function() {
-					fadeMap('minimap', true)
+					fadeMap('minimap', false)
 			    loadRadarImages('minimap')
 						minimap.once('idle', function() {
 							fadeMap('minimap', true)
@@ -42,8 +42,8 @@ function Loops() {
 			$('#current-info-details').fadeOut(0)
 			$('#current-noreport').fadeIn(0)
 		} else {
-			if (displayingAtmospheric == true) {
-				if (loopssevereweathermode == true) { displayAtmospheric(0)	} else { displaySevereAtmospheric(0) }
+			if (displayingAtmospheric == false) {
+				if (loopssevereweathermode == false) { displayAtmospheric(0)	} else { displaySevereAtmospheric(0) }
 			}
 			$('#now').fadeIn(0)
 				$('#nowwide').fadeIn(0)
@@ -102,7 +102,7 @@ function Loops() {
 			$('#forecast-shadow').hide()
 			return;
 		}
-		if (loopssevereweathermode == true) {
+		if (loopssevereweathermode == false) {
 			idx = (++idx===keys.length ? 0 : idx);
 
 			if (text) {
@@ -159,11 +159,11 @@ function Loops() {
 						$('#forecast-text').fadeOut(0)
 						$('#forecast-shadow').css('box-shadow','0 3px 10px 0 rgba(0, 0, 0, 0)')
 						$('#forecast-shadow').css('background','rgba(0,0,0,0)')
-						$('.forecast-tiles').fadeOut(0)
+						$('.').fadeOut(0)
 						$('#forecast-noreport').fadeIn(0)
 					} else {
 						$('#forecast-noreport').fadeOut(0)
-						$('#forecast-shadow').css('background','#8cadd1')
+						$('#forecast-shadow').css('background','#eb7d16ff')
 						$('#forecast-shadow').css('box-shadow','0 3px 10px 0 rgba(0, 0, 0, .35)')
 						$('#forecast-text').fadeIn(0)
 						$('#forecast-title').fadeIn(0)
@@ -182,7 +182,7 @@ function Loops() {
 						$('#forecast-noreport').fadeIn(0)
 					} else {
 						$('#forecast-noreport').fadeOut(0)
-						$('#forecast-shadow').css('background','#8cadd1')
+						$('#forecast-shadow').css('background','#eb7d16ff')
 						$('#forecast-shadow').css('box-shadow','0 3px 10px 0 rgba(0, 0, 0, .35)')
 						$('#forecast-text').fadeIn(0)
 						$('#forecast-title').fadeIn(0)

@@ -3,6 +3,8 @@
 headings:
 RADAR < MAIN CITY < CITY 1 < CITY 2
 */
+//GOLF CODE GENEROUSLY ALOWED USE BY 7EXE (STATIC)
+//https://github.com/7exe/Weatherscan-w-Golf-Garden/
 var buildHeaderGlobal;
 
 var maindiv = {
@@ -32,6 +34,8 @@ var maindiv = {
 	"otherAirportConds":".airport-slide",
 	//Travel
 	"travelIntro":".travel-slide-intro",
+	"travelWeather":".destinationmap-slide",
+	"regionalTravel":".regionaldest-slide",
 	"destinationForecast":".travel",
 	//International
 	"internationalIntro":".international-slide-intro",
@@ -41,6 +45,10 @@ var maindiv = {
 	"beachConditions":".beach-slide",
 	"costalWatersAlerts":".beach-slide",
 	"costalWatersForecast":".beach-slide",
+	//Traffic
+	"trafficIntro":".traffic-slide-intro",
+	"trafficOverview":".traffic",
+	"trafficReport":".traffic",
 	//Health
 	"healthIntro":".health-slide-intro",
 	"healthForecast":".health",
@@ -59,6 +67,17 @@ var maindiv = {
 	"healthh":".health",
 	"travell":".travel",
 	"internationall":".international",
+	"trafficc":".traffic",
+	"golff":".golf",
+	//Golf
+	"golfIntro":".golf-slide-intro",
+	"teeTime":".golf",
+	"courseForecast":".golf",
+	"golfPromo":".golf",
+	 //Garden
+	 "gardenIntro": ".garden-slide-intro",
+	 "gardenForecast": ".garden",
+	 "moreGardenImage": ".garden",
 }
 
 var mainDivHeaders = {
@@ -88,6 +107,8 @@ var mainDivHeaders = {
 	"otherAirportConds":"",
 	//Travel
 	"travelIntro":"",
+	"travelWeather":"Travel Weather",
+	"regionalTravel":"Forecast",
 	"destinationForecast":"",
 	//International
 	"internationalIntro":"",
@@ -97,6 +118,10 @@ var mainDivHeaders = {
 	"beachConditions":"Surf Report",
 	"costalWatersAlerts":"Marine Forecast",
 	"costalWatersForecast":"Marine Forecast",
+	//Traffic
+	"trafficIntro":"",
+	"trafficOverview":"Traffic Overview",
+	"trafficReport":"Traffic Report",
 	//Health
 	"healthIntro":"",
 	"healthForecast":"Outdoor Activity",
@@ -107,6 +132,15 @@ var mainDivHeaders = {
 	"healthTip":"Weather Safety Tips",
 	"moreInfoImage":"*none*",
 	//MainInfoSlides
+	//Golf
+	"golfIntro":"",
+	"teeTime":"Tee Time Forecast",
+	"courseForecast":"Golf Course Forecast",
+	"golfPromo":"*none*",
+	//Garden
+	"gardenIntro": "",
+	"gardenForecast": "Gardening Forecast",
+	"moreGardenImage": "*none*",
 }
 var mainDivCityHeaders = {
 	"localDoppler":"Local Doppler Radar",
@@ -135,6 +169,8 @@ var mainDivCityHeaders = {
 	"otherAirportConds":"*none*",
 	//Travel
 	"travelIntro":"",
+	"travelWeather":"Travel Weather",
+	"regionalTravel":"*none*",
 	"destinationForecast":"*none*",
 	//International
 	"internationalIntro":"",
@@ -144,6 +180,10 @@ var mainDivCityHeaders = {
 	"beachConditions":"",
 	"costalWatersAlerts":"",
 	"costalWatersForecast":"",
+	//Traffic
+	"trafficIntro":"",
+	"trafficOverview":"*trafficarea*",
+	"trafficReport":"*trafficarea*",
 	//Health
 	"healthIntro":"",
 	"healthForecast":"*healthlocation*",
@@ -154,10 +194,100 @@ var mainDivCityHeaders = {
 	"healthTip":"*healthlocation*",
 	"moreInfoImage":"*none*",
 	//MainInfoSlides
+	//Golf
+	"golfIntro":"",
+	"teeTime":"*golfarea*",
+	"courseForecast":"*none*",
+	"golfPromo":"*none*",
+	//Garden
+	"gardenIntro": "",
+	"gardenForecast": "*currentConditionsLocation*",
+	"moreGardenImage": "*none*",
 }
 var mainMap
 	// load slide data
 	function Slides() {
+		function alignRegMap() {
+			if (maincitycoords.state === "ME" || maincitycoords.state === "NH" || maincitycoords.state === "VT" || maincitycoords.state === "MA" || maincitycoords.state === "NY") {
+			  $('.info-slides-content.regionaldest-content .travel-map img').css({'top': "360px", 'right': '1400px'});
+			  $('.regionaldest-content .clusters .cluster.one').css({'right': '5%', 'top': '22%'});
+			  $('.regionaldest-content .clusters .cluster.two').css({'right': '65%', 'top': '35%'});
+			  $('.regionaldest-content .clusters .cluster.three').css({'right': '74%', 'top': '73%'});
+			  $('.regionaldest-content .clusters .cluster.four').css({'right': '27%', 'top': '16%'});
+			  $('.regionaldest-content .clusters .cluster.five').css({'right': '33%', 'top': '67%'});
+			} else if (maincitycoords.state === "NJ" || maincitycoords.state === "PA" || maincitycoords.state === "DE" || maincitycoords.state === "CT" || maincitycoords.state === "RI" || maincitycoords.state === "WV" || maincitycoords.state === "OH" || maincitycoords.state === "VA" || maincitycoords.state === "DC" || maincitycoords.state === "MD" || maincitycoords.state === "KY") {
+			  $('.info-slides-content.regionaldest-content .travel-map img').css({'top': "180px",'right': '1350px'});
+			  $('.regionaldest-content .clusters .cluster.one').css({'right': '10%', 'top': '13%'});
+			  $('.regionaldest-content .clusters .cluster.two').css({'right': '40%', 'top': '46%'});
+			  $('.regionaldest-content .clusters .cluster.three').css({'right': '68%','top': '40%'});
+			  $('.regionaldest-content .clusters .cluster.four').css({'right': '76%','top': '72%'});
+			  $('.regionaldest-content .clusters .cluster.five').css({'right': '52%','top': '73%'});
+			} else if (maincitycoords.state === "NC" || maincitycoords.state === "SC" ||maincitycoords.state ===  "GA" || maincitycoords.state === "TN" || maincitycoords.state === "AL" || maincitycoords.state === "MS" || maincitycoords.state === "LA" || maincitycoords.state === "AR") {
+			  $('.info-slides-content.regionaldest-content .travel-map img').css({'top': "-370px",'right': '720px'});
+			  $('.regionaldest-content .clusters .cluster.one').css({'right': '6%', 'top': '20%'});
+			  $('.regionaldest-content .clusters .cluster.two').css({'right': '50%','top': '14%'});
+			  $('.regionaldest-content .clusters .cluster.three').css({'right': '32%', 'top': '40%'});
+			  $('.regionaldest-content .clusters .cluster.four').css({'right': '49%','top':'61%'});
+			  $('.regionaldest-content .clusters .cluster.five').css({'right': '73%','top':'57%'});
+			} else if (maincitycoords.state === "FL") {
+			  $('.info-slides-content.regionaldest-content .travel-map img').css({'top': "-773px",'right':'720px'});
+			  $('.regionaldest-content .clusters .cluster.one').css({'right': '5%','top':'69%'});
+			  $('.regionaldest-content .clusters .cluster.two').css({'right': '21%',"top":'45%'});
+			  $('.regionaldest-content .clusters .cluster.three').css({'right': '14%','top':'14%'});
+			  $('.regionaldest-content .clusters .cluster.four').css({'right': '49%','top':'14%'});
+			  $('.regionaldest-content .clusters .cluster.five').css({'right': '73%','top':'22%'});
+			} else if (maincitycoords.state === "IN" || maincitycoords.state === "IL" || maincitycoords.state === "MO" || maincitycoords.state === "IA" || maincitycoords.state === "KS" || maincitycoords.state === "NE") {
+			  $('.info-slides-content.regionaldest-content .travel-map img').css({'top': "-75px",'right':'-10px'});
+			  $('.regionaldest-content .clusters .cluster.one').css({'right': '2%','top':'22%'});
+			  $('.regionaldest-content .clusters .cluster.two').css({'right': '40%','top':'16%'});
+			  $('.regionaldest-content .clusters .cluster.three').css({'right': '64%','top':'33%'});
+			  $('.regionaldest-content .clusters .cluster.four').css({'right': '43%','top':'67%'});
+			  $('.regionaldest-content .clusters .cluster.five').css({'right': '73%','top':'69%'});
+			} else if (maincitycoords.state === "AZ" || maincitycoords.state === "NM" || maincitycoords.state === "TX" || maincitycoords.state === "OK") {
+			  $('.info-slides-content.regionaldest-content .travel-map img').css({'top': "-366px",'right':'-517px'});
+			  $('.regionaldest-content .clusters .cluster.one').css({'right': '6%','top':'17%'});
+			  $('.regionaldest-content .clusters .cluster.two').css({'right':'1%','top':'56%'});
+			  $('.regionaldest-content .clusters .cluster.three').css({'right': '53%','top':'62%'});
+			  $('.regionaldest-content .clusters .cluster.four').css({'right': '55%','top':'24%'});
+			  $('.regionaldest-content .clusters .cluster.five').css({'right': '79%','top':'41%'}); 
+			} else if (maincitycoords.state === "NV" || maincitycoords.state === "CO" || maincitycoords.state === "UT" || maincitycoords.state === "WY") {
+			  $('.info-slides-content.regionaldest-content .travel-map img').css({'top': "100px",'right':'-860px'});
+			  $('.regionaldest-content .clusters .cluster.one').css({'right': '9%','top':'14%'});
+			  $('.regionaldest-content .clusters .cluster.two').css({'right': '12%','top':'41%'});
+			  $('.regionaldest-content .clusters .cluster.three').css({'right': '10%','top':'69%'});
+			  $('.regionaldest-content .clusters .cluster.four').css({'right': '57%','top':'18%'});
+			  $('.regionaldest-content .clusters .cluster.five').css({'right': '75%','top':'72%'});
+			} else if (maincitycoords.state === "MT" || maincitycoords.state === "WA" || maincitycoords.state === "OR" || maincitycoords.state === "ID") {
+			  $('.info-slides-content.regionaldest-content .travel-map img').css({'top': "700px",'right':'-1410px'});
+			  $('.regionaldest-content .clusters .cluster.one').css({'right': '71%','top':'20%'});
+			  $('.regionaldest-content .clusters .cluster.two').css({'right': '41%','top':'24%'});
+			  $('.regionaldest-content .clusters .cluster.three').css({'right': '24%','top':'73%'});
+			  $('.regionaldest-content .clusters .cluster.four').css({'right': '71%','top':'57%'});
+			  $('.regionaldest-content .clusters .cluster.five').css({'right': '0%','top':'44%'}); 
+			} else if (maincitycoords.state === "CA") {
+			  $('.info-slides-content.regionaldest-content .travel-map img').css({'top': "-170px",'right':'-1300px'});
+			  $('.regionaldest-content .clusters .cluster.one').css({'right': '76%','top':'14%'});
+			  $('.regionaldest-content .clusters .cluster.two').css({'right': '15%','top':'19%'});
+			  $('.regionaldest-content .clusters .cluster.three').css({'right': '4%','top':'71%'});
+			  $('.regionaldest-content .clusters .cluster.four').css({'right': '49%','top':'73%'});
+			  $('.regionaldest-content .clusters .cluster.five').css({'right': '29%','top':'39%'});  
+			} else if (maincitycoords.state === "ND" || maincitycoords.state === "SD" || maincitycoords.state === "WI" || maincitycoords.state === "MI" || maincitycoords.state === "MN") {
+			  $('.info-slides-content.regionaldest-content .travel-map img').css({'top': "620px",'right':'-20px'});
+			  $('.regionaldest-content .clusters .cluster.one').css({'right': '30%','top':'21%'});
+			  $('.regionaldest-content .clusters .cluster.two').css({'right': '10%','top':'44%'});
+			  $('.regionaldest-content .clusters .cluster.three').css({'right': '42%','top':'73%'});
+			  $('.regionaldest-content .clusters .cluster.four').css({'right': '76%','top':'69%'});
+			  $('.regionaldest-content .clusters .cluster.five').css({'right': '1%','top':'73%'});
+			} else {
+			  $('.info-slides-content.regionaldest-content .travel-map img').css({'top': "-1200px",'right':'-2200px', 'scale':'600%'});
+			  $('.regionaldest-content .clusters .cluster.one').fadeOut(0)
+			  $('.regionaldest-content .clusters .cluster.two').fadeOut(0)
+			  $('.regionaldest-content .clusters .cluster.three').fadeOut(0)
+			  $('.regionaldest-content .clusters .cluster.four').fadeOut(0)
+			  $('.regionaldest-content .clusters .cluster.five').fadeOut(0)
+			}
+		  }
+		  alignRegMap();
 		var idx = 0;
 		severemode = false;
 		var radarSlideDuration = 60000,
@@ -242,6 +372,12 @@ var mainMap
 					}
 				}
 				,localDoppler() {
+					map.on('load', function() {
+						loadRadarImages('radar-1')
+					  });
+					  satellitemap.on('load', function() {
+						loadRadarImages('satrad-1')
+					  });
 					var locthing = (location == 0) ? maincitycoords : locList[location - 1]
 					var zoom = 7.7, maxloop = Math.ceil((slideDelay)*(11/60000)), lat = locthing.lat, lon = locthing.lon
 					weatherAudio.playLocalRadar();
@@ -267,6 +403,12 @@ var mainMap
 					}, slideDelay);
 				}
 				,regionalSatellite() {
+					map.on('load', function() {
+						loadRadarImages('radar-1')
+					  });
+					  satellitemap.on('load', function() {
+						loadRadarImages('satrad-1')
+					  });
 					var locthing = (location == 0) ? maincitycoords : locList[location - 1]
 					var zoom = 4.5, maxloop = Math.ceil((slideDelay)*(11/60000)), lat = locthing.lat, lon = locthing.lon
 					$('.radar-slide .radar-legends .pastlegend').text('Past 5 Hours')
@@ -306,7 +448,7 @@ var mainMap
 					setTimeout(function() {
 						$('.city-slide-intro .weatherscancopyright .copyrighttext').fadeOut(500).promise().done(function(){
 							$('.city-slide-intro .weatherscancopyright .copyrighttext').css('font-size','15px')
-							$('.city-slide-intro .weatherscancopyright .copyrighttext').text(`© ${new Date().getFullYear()} Weather Group Television LLC All Rights Reserved`)
+							$('.city-slide-intro .weatherscancopyright .copyrighttext').text(`© ${new Date().getFullYear()} Weather Group Television LLC All Rights Reserved, Custom Emulation created by WeatherTV by SketchyLiy`)
 							$('.city-slide-intro .weatherscancopyright .copyrighttext').fadeIn(500);
 						});
 					}, 5000);
@@ -317,7 +459,7 @@ var mainMap
 						$('.city-slide-intro .cityweatherscanmarquee').fadeOut(500).promise().done(function(){
 							$('.city-slide-intro').fadeOut(0);
 							$('.city-slide-intro .weatherscancopyright .copyrighttext').css('font-size','28px')
-							$('.city-slide-intro .weatherscancopyright .copyrighttext').text("Weatherscan is brought to you by The Weather Channel® and MIDCO")
+							$('.city-slide-intro .weatherscancopyright .copyrighttext').text("Weatherscan is brought to you by The Weather Channel® and RockPawsMedia®")
 							wait(0);
 						});
 					}, 10000);
@@ -640,7 +782,635 @@ var mainMap
 					}, slideDelay);
 				}
 			},
-			//health
+			// Garden
+			gardenIntro() {
+				$(".garden-slide-intro");
+				$(".garden-slide-intro .accent").fadeIn(500);
+				$(".garden-slide-intro .weatherscanmarquee").fadeIn(500);
+				$(".garden-slide-intro .weatherscanmarquee").css(
+				  "animation",
+				  "marqueeweatherscan 5.5s linear normal forwards"
+				);
+				setTimeout(function () {
+				  $(".garden-slide-intro .segment").fadeIn(500);
+				}, 1000);
+				setTimeout(function () {
+				  $(".garden-slide-intro .segment").fadeOut(500);
+				  $(".garden-slide-intro .accent").fadeOut(500);
+				  $(".garden-slide-intro .weatherscanmarquee")
+					.fadeOut(500)
+					.promise()
+					.done(function () {
+					  wait(0);
+					});
+				}, 5000);
+			  },
+			  gardenForecast: function () {
+				wlength = {
+				  1: "8px",
+				  2: "45px",
+				  3: "85px",
+				  4: "125px",
+				  5: "165px",
+				  6: "205px",
+				  7: "245px",
+				  8: "285px",
+				  9: "326px",
+				  10: "366px",
+				};
+				var text_fix = {
+				  0: "-10px",
+				  1: "-10px",
+				  2: "-50px",
+				  3: "-90px",
+				  4: "-130px",
+				  5: "-170px",
+				  6: "-210px",
+				  7: "-250px",
+				  8: "-290px",
+				  9: "-330px",
+				  10: "-343px",
+				};
+				var wtime = {
+				  1: 0,
+				  2: 200,
+				  3: 400,
+				  4: 600,
+				  5: 800,
+				  6: 1000,
+				  7: 1200,
+				  8: 1400,
+				  9: 1600,
+				  10: 1800,
+				};
+		
+				$(".info-slide-content.gardenindex .bararrow").css("left", "8px");
+				$(".info-slide-content.gardenindex .bararrow .bararrowtext").css(
+				  "left",
+				  text_fix[weatherInfo.gardenReport.watering_need_index]
+				);
+				$(".info-slide-content.gardenindex .bararrow .bararrowtext").fadeOut(0);
+		
+				getCCicon(
+				  ".garden .icon",
+				  weatherInfo.healthforecast.icon,
+				  weatherInfo.healthforecast.windspeed
+				);
+				$(".info-slide-content.gardenindex .bararrow .bararrowtext").text(
+				  weatherInfo.gardenReport.watering_need_category
+				);
+				$(".info-slide-content.gardenindex .precipvalue").text(
+				  weatherInfo.healthforecast.precipChance
+				);
+				$(".info-slide-content.gardenindex .low").text(
+				  weatherInfo.healthforecast.low
+				);
+				$(".info-slide-content.gardenindex .high").text(
+				  weatherInfo.healthforecast.high
+				);
+				$(".info-slide-content.gardenindex .thingtext").text(
+				  weatherInfo.healthforecast.day
+				);
+				$(".info-slide-content.gardenindex .cloudcovervalue").text(
+				  weatherInfo.gardenReport.cloudCover
+				);
+		
+				$(".gardenindex")
+				  .fadeIn(500)
+				  .promise()
+				  .done(function () {
+					$(".info-slide-content.gardenindex .bararrow").animate(
+					  { left: wlength[weatherInfo.gardenReport.watering_need_index] },
+					  wtime[weatherInfo.gardenReport.watering_need_index],
+					  "linear",
+					  function () {
+						$(
+						  ".info-slide-content.gardenindex .bararrow .bararrowtext"
+						).fadeIn(500);
+					  }
+					);
+				  });
+		
+				setTimeout(function () {
+				  $(".gardenindex")
+					.fadeOut(500)
+					.promise()
+					.done(function () {
+					  wait(0);
+					});
+				}, slideDelay);
+			  },
+		
+			  moreGardenImage() {
+				$(".info-slide-content.gardenmoreinfoimage").fadeIn(500);
+				setTimeout(function () {
+				  $(".info-slide-content.gardenmoreinfoimage")
+					.fadeOut(500)
+					.promise()
+					.done(function () {
+					  wait(0);
+					});
+				}, slideDelay);
+			  },
+			//golf
+			golfIntro() {
+				$('.golf-slide-intro .accent').fadeIn(500);
+				$('.golf-slide-intro .weatherscanmarquee').fadeIn(500);
+				$('.golf-slide-intro .weatherscanmarquee').css('animation', 'marqueeweatherscan 5.5s linear normal forwards');
+				setTimeout(function() {
+					$('.golf-slide-intro .segment').fadeIn(500);
+				}, 1000);
+				setTimeout(function() {
+					$('.golf-slide-intro .segment').fadeOut(500)
+					$('.golf-slide-intro .accent').fadeOut(500);
+					
+					$('.golf-slide-intro .weatherscanmarquee').fadeOut(500).promise().done(function(){
+						wait(0);
+					});
+				}, 5000);
+			},
+			teeTime() {
+				$('.info-slide-content.teetime .hour').each(function(){
+					$('.info-slide-content.teetime .hour .tempbar').css("height", "0px")
+					$('.info-slide-content.teetime .hour .tempbar .temp').css("opacity", "0%");
+					$('.info-slide-content.teetime .hour .tempbar .wind').css("opacity", "0%");
+				i = i + 1
+				});
+				if (weatherInfo.golf.teeTime.noReport == true) {
+					$('.info-slide.golf .tempunavailable').fadeIn(500);
+					setTimeout(function() {
+						$('.info-slide.golf tempunavailable').fadeOut(500).promise().done(function(){
+							wait(0);
+						});
+					}, slideDelay);
+				} else {
+					//hour title
+				$('.info-slide-content.teetime .hour.i .hourlabel .thingtext').text(weatherInfo.golf.teeTime.hour[0].time);
+				$('.info-slide-content.teetime .hour.ii .hourlabel .thingtext').text(weatherInfo.golf.teeTime.hour[1].time);
+				$('.info-slide-content.teetime .hour.iii .hourlabel .thingtext').text(weatherInfo.golf.teeTime.hour[2].time);
+				$('.info-slide-content.teetime .hour.iv .hourlabel .thingtext').text(weatherInfo.golf.teeTime.hour[3].time);
+				$('.info-slide-content.teetime .hour.v .hourlabel .thingtext').text(weatherInfo.golf.teeTime.hour[4].time);
+
+				//day title
+				$('.info-slide-content.teetime .hour.i .daylabel').text(weatherInfo.golf.teeTime.hour[0].day);
+				$('.info-slide-content.teetime .hour.ii .daylabel').text(weatherInfo.golf.teeTime.hour[1].day);
+				$('.info-slide-content.teetime .hour.iii .daylabel').text(weatherInfo.golf.teeTime.hour[2].day);
+				$('.info-slide-content.teetime .hour.iv .daylabel').text(weatherInfo.golf.teeTime.hour[3].day);
+				$('.info-slide-content.teetime .hour.v .daylabel').text(weatherInfo.golf.teeTime.hour[4].day);
+
+				//temp
+				$('.info-slide-content.teetime .hour.i .tempbar .temp').text(weatherInfo.golf.teeTime.hour[0].temp);
+				$('.info-slide-content.teetime .hour.ii .tempbar .temp').text(weatherInfo.golf.teeTime.hour[1].temp);
+				$('.info-slide-content.teetime .hour.iii .tempbar .temp').text(weatherInfo.golf.teeTime.hour[2].temp);
+				$('.info-slide-content.teetime .hour.iv .tempbar .temp').text(weatherInfo.golf.teeTime.hour[3].temp);
+				$('.info-slide-content.teetime .hour.v .tempbar .temp').text(weatherInfo.golf.teeTime.hour[4].temp);
+
+				//wind
+				$('.info-slide-content.teetime .hour.i .tempbar .wind').text(weatherInfo.golf.teeTime.hour[0].wind);
+				$('.info-slide-content.teetime .hour.ii .tempbar .wind').text(weatherInfo.golf.teeTime.hour[1].wind);
+				$('.info-slide-content.teetime .hour.iii .tempbar .wind').text(weatherInfo.golf.teeTime.hour[2].wind);
+				$('.info-slide-content.teetime .hour.iv .tempbar .wind').text(weatherInfo.golf.teeTime.hour[3].wind);
+				$('.info-slide-content.teetime .hour.v .tempbar .wind').text(weatherInfo.golf.teeTime.hour[4].wind);
+
+				//icon
+				getCCicon('.info-slide-content.teetime .hour.i .icon',weatherInfo.golf.teeTime.hour[0].icon, weatherInfo.golf.teeTime.hour[0].windspeed)
+				getCCicon('.info-slide-content.teetime .hour.ii .icon',weatherInfo.golf.teeTime.hour[1].icon, weatherInfo.golf.teeTime.hour[1].windspeed)
+				getCCicon('.info-slide-content.teetime .hour.iii .icon',weatherInfo.golf.teeTime.hour[2].icon, weatherInfo.golf.teeTime.hour[2].windspeed)
+				getCCicon('.info-slide-content.teetime .hour.iv .icon',weatherInfo.golf.teeTime.hour[3].icon, weatherInfo.golf.teeTime.hour[3].windspeed)
+				getCCicon('.info-slide-content.teetime .hour.v .icon',weatherInfo.golf.teeTime.hour[4].icon, weatherInfo.golf.teeTime.hour[4].windspeed)
+
+				// calculate height of tempbars
+				var temps = [];
+				for (var i = 0; i < 5; i++) {
+					temps.push(weatherInfo.golf.teeTime.hour[i].temp);
+				}
+				var min = Math.min(...temps),  // 54
+					max = Math.max(...temps),  // 73
+					range = ((max-min) != 0) ? (max-min) : .001,
+					prange = (100-78), // percent range for bar height
+					hourlable = ['i', 'ii', 'iii', 'iv', 'v'],
+					temp, value, i = 0;
+				$('.info-slide-content.teetime .hour').each(function(){
+					temp = weatherInfo.golf.teeTime.hour[i].temp
+					value = ((temp-min)/range) * prange + 78; // find percentage of range and translate to percent and add that to the starting css % height number
+					valueii = (value/100) * 220 // multiply percentage by max height
+					$('.info-slide-content.teetime .hour.' + hourlable[i] + ' .tempbar').animate({height:valueii+"px"}, 1500,function(){
+						$('.info-slide-content.teetime .hour .tempbar .temp').fadeTo('slow', 1);
+						$('.info-slide-content.teetime .hour .tempbar .wind').fadeTo('slow', 1);
+					});
+					i = i + 1
+				})
+					$('.info-slide-content.teetime').fadeIn(500);
+					setTimeout(function() {
+						$('.info-slide-content.teetime').fadeOut(500).promise().done(function(){
+							wait(0);
+						});
+					}, slideDelay);
+				}
+			},
+			courseForecast(aidx) {
+				aidx = (aidx===undefined ? 1 : aidx);
+				try {
+				var olength = {"0":"-15", "1":"5.5", "2":"26", "3":"46.5", "4":"67", "5":"87.5", "6":"108", "7":"128.5", "8":"149", "9":"169.5", "10":"190"}[weatherInfo.golf.courses[aidx-1].day[0].golfIndex]
+				var otlength = {"0":"-40", "1":"-40", "2":"-40", "3":"-43", "4":"-19", "5":"2", "6":"19", "7":"38", "8":"40", "9":"40", "10":"50"}[weatherInfo.golf.courses[aidx-1].day[0].golfIndex]
+				var otime = {"0":0, "1":250, "2":500, "3":750, "4":1000, "5":1250, "6":1500, "7":1750, "8":2000, "9":2250, "10":2500}[weatherInfo.golf.courses[aidx-1].day[0].golfIndex]
+				var tlength = {"0":"-15", "1":"5.5", "2":"26", "3":"46.5", "4":"67", "5":"87.5", "6":"108", "7":"128.5", "8":"149", "9":"169.5", "10":"190"}[weatherInfo.golf.courses[aidx-1].day[1].golfIndex]
+				var ttlength = {"0":"-40", "1":"-40", "2":"-40", "3":"-43", "4":"-19", "5":"2", "6":"19", "7":"38", "8":"40", "9":"40", "10":"50"}[weatherInfo.golf.courses[aidx-1].day[1].golfIndex]
+				var ttime = {"0":0, "1":250, "2":500, "3":750, "4":1000, "5":1250, "6":1500, "7":1750, "8":2000, "9":2250, "10":2500}[weatherInfo.golf.courses[aidx-1].day[1].golfIndex]
+				var hlength = {"0":"-15", "1":"5.5", "2":"26", "3":"46.5", "4":"67", "5":"87.5", "6":"108", "7":"128.5", "8":"149", "9":"169.5", "10":"190"}[weatherInfo.golf.courses[aidx-1].day[2].golfIndex]
+				var htlength = {"0":"-40", "1":"-40", "2":"-40", "3":"-43", "4":"-19", "5":"2", "6":"19", "7":"38", "8":"40", "9":"40", "10":"50"}[weatherInfo.golf.courses[aidx-1].day[2].golfIndex]
+				var htime = {"0":0, "1":250, "2":500, "3":750, "4":1000, "5":1250, "6":1500, "7":1750, "8":2000, "9":2250, "10":2500}[weatherInfo.golf.courses[aidx-1].day[2].golfIndex]
+				$('.info-slide-content.golfforecast .thing .thingtext').text(weatherInfo.golf.courses[aidx-1].displayname)
+
+				$('.info-slide-content.golfforecast .frost-pane.left .day').text(weatherInfo.golf.courses[aidx-1].day[0].day)
+				$('.info-slide-content.golfforecast .frost-pane.mid .day').text(weatherInfo.golf.courses[aidx-1].day[1].day)
+				$('.info-slide-content.golfforecast .frost-pane.right .day').text(weatherInfo.golf.courses[aidx-1].day[2].day)
+				
+				getCCicon('.info-slide-content.golfforecast .frost-pane.left .icon',weatherInfo.golf.courses[aidx-1].day[0].icon, weatherInfo.golf.courses[aidx-1].day[0].windspeed)
+				getCCicon('.info-slide-content.golfforecast .frost-pane.mid .icon',weatherInfo.golf.courses[aidx-1].day[1].icon, weatherInfo.golf.courses[aidx-1].day[1].windspeed)
+				getCCicon('.info-slide-content.golfforecast .frost-pane.right .icon',weatherInfo.golf.courses[aidx-1].day[2].icon, weatherInfo.golf.courses[aidx-1].day[2].windspeed)
+
+				$('.info-slide-content.golfforecast .frost-pane.left .high').text(weatherInfo.golf.courses[aidx-1].day[0].high)
+				$('.info-slide-content.golfforecast .frost-pane.mid .high').text(weatherInfo.golf.courses[aidx-1].day[1].high)
+				$('.info-slide-content.golfforecast .frost-pane.right .high').text(weatherInfo.golf.courses[aidx-1].day[2].high)
+
+				$('.info-slide-content.golfforecast .frost-pane.left .low').text(weatherInfo.golf.courses[aidx-1].day[0].low)
+				$('.info-slide-content.golfforecast .frost-pane.mid .low').text(weatherInfo.golf.courses[aidx-1].day[1].low)
+				$('.info-slide-content.golfforecast .frost-pane.right .low').text(weatherInfo.golf.courses[aidx-1].day[2].low)
+
+				$('.info-slide-content.golfforecast .frost-pane.left .wind').text(weatherInfo.golf.courses[aidx-1].day[0].wind)
+				$('.info-slide-content.golfforecast .frost-pane.mid .wind').text(weatherInfo.golf.courses[aidx-1].day[1].wind)
+				$('.info-slide-content.golfforecast .frost-pane.right .wind').text(weatherInfo.golf.courses[aidx-1].day[2].wind)
+				
+				$('.info-slide-content.golfforecast .frost-pane.left .wind').text(weatherInfo.golf.courses[aidx-1].day[0].wind)
+				$('.info-slide-content.golfforecast .frost-pane.mid .wind').text(weatherInfo.golf.courses[aidx-1].day[1].wind)
+				$('.info-slide-content.golfforecast .frost-pane.right .wind').text(weatherInfo.golf.courses[aidx-1].day[2].wind)
+
+				$('.info-slide-content.golfforecast .frost-pane.left .bararrowtext').text(weatherInfo.golf.courses[aidx-1].day[0].golfIndexWord)
+				$('.info-slide-content.golfforecast .frost-pane.mid .bararrowtext').text(weatherInfo.golf.courses[aidx-1].day[1].golfIndexWord)
+				$('.info-slide-content.golfforecast .frost-pane.right .bararrowtext').text(weatherInfo.golf.courses[aidx-1].day[2].golfIndexWord)
+
+				$('.info-slide-content.golfforecast .frost-pane.left .forecontainer .bar .bararrow').css('left','-15px')
+				$('.info-slide-content.golfforecast .frost-pane.left .forecontainer .bar .bararrowtext').css('margin-left','0px')
+				$('.info-slide-content.golfforecast .frost-pane.left .forecontainer .bar .bararrowtext').fadeOut(0)
+				$('.info-slide-content.golfforecast .frost-pane.mid .forecontainer .bar .bararrow').css('left','-15px')
+				$('.info-slide-content.golfforecast .frost-pane.mid .forecontainer .bar .bararrowtext').css('margin-left','0px')
+				$('.info-slide-content.golfforecast .frost-pane.mid .forecontainer .bar .bararrowtext').fadeOut(0)
+				$('.info-slide-content.golfforecast .frost-pane.right .forecontainer .bar .bararrow').css('left','-15px')
+				$('.info-slide-content.golfforecast .frost-pane.right .forecontainer .bar .bararrowtext').css('margin-left','0px')
+				$('.info-slide-content.golfforecast .frost-pane.right .forecontainer .bar .bararrowtext').fadeOut(0)
+
+				$('.info-slide-content.golfforecast').fadeIn(500);
+
+				setTimeout(function () {
+					$('.info-slide-content.golfforecast .frost-pane.left .forecontainer .bar .bararrowtext').css("margin-left", otlength+"px")
+					$('.info-slide-content.golfforecast .frost-pane.left .forecontainer .bar .bararrow').animate({left: olength + "px"}, otime, 'linear', function() {
+						$('.info-slide-content.golfforecast .frost-pane.left .bararrowtext').text(weatherInfo.golf.courses[aidx-1].day[0].golfIndexWord);
+						$('.info-slide-content.golfforecast .frost-pane.left .bararrowtext').fadeIn(500);
+					})
+					$('.info-slide-content.golfforecast .frost-pane.mid .forecontainer .bar .bararrowtext').css("margin-left", ttlength+"px")
+					$('.info-slide-content.golfforecast .frost-pane.mid .forecontainer .bar .bararrow').animate({left: tlength + "px"}, ttime, 'linear', function() {
+						$('.info-slide-content.golfforecast .frost-pane.mid .bararrowtext').text(weatherInfo.golf.courses[aidx-1].day[1].golfIndexWord);
+						$('.info-slide-content.golfforecast .frost-pane.mid .bararrowtext').fadeIn(500);
+					})
+					$('.info-slide-content.golfforecast .frost-pane.right .forecontainer .bar .bararrowtext').css("margin-left", htlength+"px")
+					$('.info-slide-content.golfforecast .frost-pane.right .forecontainer .bar .bararrow').animate({left: hlength + "px"}, htime, 'linear', function() {
+						$('.info-slide-content.golfforecast .frost-pane.right .bararrowtext').text(weatherInfo.golf.courses[aidx-1].day[2].golfIndexWord);
+						$('.info-slide-content.golfforecast .frost-pane.right .bararrowtext').fadeIn(500);
+					})
+				}, 500);
+				setTimeout( function() {
+					if (aidx<3) {
+						$('.info-slide-content.golfforecast').fadeOut(500).promise().done(function(){
+							currentDisplay(aidx+1);
+							//fillinfo();
+						});
+					} else {
+						$('.info-slide-content.golfforecast').fadeOut(500).promise().done(function(){
+							wait(0);
+						});
+					}
+				}, slideDelay)
+				} catch (error) {
+					console.log(error)
+					$('.info-slide.golf .tempunavailable').fadeIn(500);
+					setTimeout( function() {
+						if (aidx<2) {
+							$('.info-slide.golf .tempunavailable').fadeOut(500).promise().done(function(){
+								currentDisplay(aidx+1);
+								//fillinfo();
+							});
+						} else {
+							$('.info-slide.golf .tempunavailable').fadeOut(500).promise().done(function(){
+								wait(0);
+							});
+						}
+					}, slideDelay)
+				}
+			},
+			golfPromo() {
+
+				$('.info-slide-content.golfmoreinfoimage').fadeIn(500);
+					setTimeout(function() {
+						$('.info-slide-content.golfmoreinfoimage').fadeOut(500).promise().done(function(){
+							wait(0);
+						});
+					}, slideDelay);
+			},
+			//traffic
+			trafficIntro() {
+				$('.traffic-slide-intro .accent').fadeIn(500);
+				$('.traffic-slide-intro .weatherscanmarquee').fadeIn(500);
+				$('.traffic-slide-intro .weatherscanmarquee').css('animation', 'marqueeweatherscan 5.5s linear normal forwards')
+				setTimeout(function() {
+					$('.traffic-slide-intro .segment').fadeIn(500);
+				}, 1000);
+				setTimeout(function() {
+					$('.traffic-slide-intro .segment').fadeOut(500)
+					$('.traffic-slide-intro .accent').fadeOut(500);
+					$('.traffic-slide-intro .weatherscanmarquee').fadeOut(500).promise().done(function(){
+						wait(0);
+					});
+				}, 5000);
+			}
+			,trafficOverview () {
+				weatherAudio.playTrafficConditions();
+				if (weatherInfo.trafficMapUnavailable == true) {
+					$('.info-slide.traffic .tempunavailable').fadeIn(500);
+					setTimeout(function() {
+						$('.info-slide.traffic .tempunavailable').fadeOut(500).promise().done(function(){
+							wait(0);
+						});
+					}, slideDelay);
+				} else {
+					$('.info-slide-content.traffic-overview').fadeIn(500);
+					tt.resize()
+					setTimeout(function() {
+						$('.info-slide-content.traffic-overview').fadeOut(500).promise().done(function(){
+							wait(0);
+						});
+					}, slideDelay);
+				}
+			}
+			,trafficReport() {
+				function hideBottom() {
+					$('.info-slide-content.traffic-report .frost-pane.blank').fadeIn(0);
+					$('.info-slide-content.traffic-report .thing-bot .thingbg').fadeOut(0);
+					$('.info-slide-content.traffic-report .thing-bot .thingtext').fadeOut(0);
+					$('.info-slide-content.traffic-report .description-bot').fadeOut(0);
+					$('.info-slide-content.traffic-report .frost-pane.bot').fadeOut(0);
+					$('.info-slide-content.traffic-report .impact-bot').fadeOut(0);
+				}
+				function showBottom() {
+					$('.info-slide-content.traffic-report .frost-pane.blank').fadeOut(0);
+					$('.info-slide-content.traffic-report .thing-bot .thingbg').fadeIn(0);
+					$('.info-slide-content.traffic-report .thing-bot .thingtext').fadeIn(0);
+					$('.info-slide-content.traffic-report .description-bot').fadeIn(0);
+					$('.info-slide-content.traffic-report .frost-pane.bot').fadeIn(0);
+					$('.info-slide-content.traffic-report .impact-bot').fadeIn(0);
+				}
+				if (weatherInfo.trafficIncidents.incidentcount == 1) {
+					$('.info-slide-content.traffic-report .thing-top .thingtext').text(weatherInfo.trafficIncidents.incidents[0].title);
+					if (weatherInfo.trafficIncidents.incidents[0].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#3DD135")};
+					$('.info-slide-content.traffic-report .impact-top').text(weatherInfo.trafficIncidents.incidents[0].impact);
+					$('.info-slide-content.traffic-report .description-top').text("           " +weatherInfo.trafficIncidents.incidents[0].fulldesc);
+					hideBottom();
+
+					$('.info-slide-content.traffic-report').fadeIn(500);
+					
+					setTimeout(function() {
+						$('.info-slide-content.traffic-report').fadeOut(500).promise().done(function(){
+							wait(0);
+						});
+					}, slideDelay);
+				} else if (weatherInfo.trafficIncidents.incidentcount == 2) {
+					$('.info-slide-content.traffic-report .thing-top .thingtext').text(weatherInfo.trafficIncidents.incidents[0].title);
+					if (weatherInfo.trafficIncidents.incidents[0].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#3DD135")};
+					$('.info-slide-content.traffic-report .impact-top').text(weatherInfo.trafficIncidents.incidents[0].impact);
+					$('.info-slide-content.traffic-report .description-top').text("           " +weatherInfo.trafficIncidents.incidents[0].fulldesc);
+					$('.info-slide-content.traffic-report .thing-bot .thingtext').text(weatherInfo.trafficIncidents.incidents[1].title);
+					if (weatherInfo.trafficIncidents.incidents[1].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#3DD135")};
+					$('.info-slide-content.traffic-report .impact-bot').text(weatherInfo.trafficIncidents.incidents[1].impact);
+					$('.info-slide-content.traffic-report .description-bot').text("           " +weatherInfo.trafficIncidents.incidents[1].fulldesc);
+					showBottom();
+
+					$('.info-slide-content.traffic-report').fadeIn(500);
+					
+					setTimeout(function() {
+						$('.info-slide-content.traffic-report').fadeOut(500).promise().done(function(){
+							wait(0);
+						});
+					}, slideDelay);
+				} else if (weatherInfo.trafficIncidents.incidentcount == 3) {
+					$('.info-slide-content.traffic-report .thing-top .thingtext').text(weatherInfo.trafficIncidents.incidents[0].title);
+					if (weatherInfo.trafficIncidents.incidents[0].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#3DD135")};
+					$('.info-slide-content.traffic-report .impact-top').text(weatherInfo.trafficIncidents.incidents[0].impact);
+					$('.info-slide-content.traffic-report .description-top').text("           " +weatherInfo.trafficIncidents.incidents[0].fulldesc);
+					$('.info-slide-content.traffic-report .thing-bot .thingtext').text(weatherInfo.trafficIncidents.incidents[1].title);
+					if (weatherInfo.trafficIncidents.incidents[1].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#3DD135")};
+					$('.info-slide-content.traffic-report .impact-bot').text(weatherInfo.trafficIncidents.incidents[1].impact);
+					$('.info-slide-content.traffic-report .description-bot').text("           " +weatherInfo.trafficIncidents.incidents[1].fulldesc);
+					showBottom();
+
+					$('.info-slide-content.traffic-report').fadeIn(500);
+
+					setTimeout(function() {
+						$('.info-slide-content.traffic-report').fadeOut(250);
+					}, slideDelay);
+
+					setTimeout(function() {
+						setTimeout(function() {
+						$('.info-slide-content.traffic-report .thing-top .thingtext').text(weatherInfo.trafficIncidents.incidents[2].title);
+						if (weatherInfo.trafficIncidents.incidents[2].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#3DD135")};
+						$('.info-slide-content.traffic-report .impact-top').text(weatherInfo.trafficIncidents.incidents[2].impact);
+						$('.info-slide-content.traffic-report .description-top').text("           " +weatherInfo.trafficIncidents.incidents[2].fulldesc);
+						hideBottom();
+						}, 250)
+						
+
+						$('.info-slide-content.traffic-report').fadeIn(250);
+					}, slideDelay);
+
+					setTimeout(function() {
+						$('.info-slide-content.traffic-report').fadeOut(500).promise().done(function(){
+							wait(0);
+						});
+					}, slideDelay*2);
+				} else if (weatherInfo.trafficIncidents.incidentcount == 4) {
+					$('.info-slide-content.traffic-report .thing-top .thingtext').text(weatherInfo.trafficIncidents.incidents[0].title);
+					if (weatherInfo.trafficIncidents.incidents[0].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#3DD135")};
+					$('.info-slide-content.traffic-report .impact-top').text(weatherInfo.trafficIncidents.incidents[0].impact);
+					$('.info-slide-content.traffic-report .description-top').text("           " +weatherInfo.trafficIncidents.incidents[0].fulldesc);
+					$('.info-slide-content.traffic-report .thing-bot .thingtext').text(weatherInfo.trafficIncidents.incidents[1].title);
+					if (weatherInfo.trafficIncidents.incidents[1].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#3DD135")};
+					$('.info-slide-content.traffic-report .impact-bot').text(weatherInfo.trafficIncidents.incidents[1].impact);
+					$('.info-slide-content.traffic-report .description-bot').text("           " +weatherInfo.trafficIncidents.incidents[1].fulldesc);
+					showBottom();
+
+					$('.info-slide-content.traffic-report').fadeIn(500);
+
+					setTimeout(function() {
+						$('.info-slide-content.traffic-report').fadeOut(250);
+					}, slideDelay);
+
+					setTimeout(function() {
+						setTimeout(function() {
+						$('.info-slide-content.traffic-report .thing-top .thingtext').text(weatherInfo.trafficIncidents.incidents[2].title);
+						if (weatherInfo.trafficIncidents.incidents[2].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#3DD135")};
+						$('.info-slide-content.traffic-report .impact-top').text(weatherInfo.trafficIncidents.incidents[2].impact);
+						$('.info-slide-content.traffic-report .description-top').text("           " +weatherInfo.trafficIncidents.incidents[2].fulldesc);
+						$('.info-slide-content.traffic-report .thing-bot .thingtext').text(weatherInfo.trafficIncidents.incidents[3].title);
+						if (weatherInfo.trafficIncidents.incidents[3].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#3DD135")};
+						$('.info-slide-content.traffic-report .impact-bot').text(weatherInfo.trafficIncidents.incidents[3].impact);
+						$('.info-slide-content.traffic-report .description-bot').text("           " +weatherInfo.trafficIncidents.incidents[3].fulldesc);
+						showBottom();
+						}, 250)
+						
+
+						$('.info-slide-content.traffic-report').fadeIn(250);
+					}, slideDelay);
+
+					setTimeout(function() {
+						$('.info-slide-content.traffic-report').fadeOut(500).promise().done(function(){
+							wait(0);
+						});
+					}, slideDelay*2);
+				} else if (weatherInfo.trafficIncidents.incidentcount == 5) {
+					$('.info-slide-content.traffic-report .thing-top .thingtext').text(weatherInfo.trafficIncidents.incidents[0].title);
+					if (weatherInfo.trafficIncidents.incidents[0].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#3DD135")};
+					$('.info-slide-content.traffic-report .impact-top').text(weatherInfo.trafficIncidents.incidents[0].impact);
+					$('.info-slide-content.traffic-report .description-top').text("           " +weatherInfo.trafficIncidents.incidents[0].fulldesc);
+					$('.info-slide-content.traffic-report .thing-bot .thingtext').text(weatherInfo.trafficIncidents.incidents[1].title);
+					if (weatherInfo.trafficIncidents.incidents[1].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#3DD135")};
+					$('.info-slide-content.traffic-report .impact-bot').text(weatherInfo.trafficIncidents.incidents[1].impact);
+					$('.info-slide-content.traffic-report .description-bot').text("           " +weatherInfo.trafficIncidents.incidents[1].fulldesc);
+					showBottom();
+
+					$('.info-slide-content.traffic-report').fadeIn(500);
+
+					setTimeout(function() {
+						$('.info-slide-content.traffic-report').fadeOut(250);
+					}, slideDelay);
+
+					setTimeout(function() {
+						setTimeout(function() {
+						$('.info-slide-content.traffic-report .thing-top .thingtext').text(weatherInfo.trafficIncidents.incidents[2].title);
+						if (weatherInfo.trafficIncidents.incidents[2].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#3DD135")};
+						$('.info-slide-content.traffic-report .impact-top').text(weatherInfo.trafficIncidents.incidents[2].impact);
+						$('.info-slide-content.traffic-report .description-top').text("           " +weatherInfo.trafficIncidents.incidents[2].fulldesc);
+						$('.info-slide-content.traffic-report .thing-bot .thingtext').text(weatherInfo.trafficIncidents.incidents[3].title);
+						if (weatherInfo.trafficIncidents.incidents[3].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#3DD135")};
+						$('.info-slide-content.traffic-report .impact-bot').text(weatherInfo.trafficIncidents.incidents[3].impact);
+						$('.info-slide-content.traffic-report .description-bot').text("           " +weatherInfo.trafficIncidents.incidents[3].fulldesc);
+						showBottom();
+						}, 250)
+						
+						$('.info-slide-content.traffic-report').fadeIn(250);
+
+						setTimeout(function() {
+							$('.info-slide-content.traffic-report').fadeOut(250);
+						}, slideDelay);	
+						setTimeout(function() {
+							setTimeout(function() {
+							$('.info-slide-content.traffic-report .thing-top .thingtext').text(weatherInfo.trafficIncidents.incidents[4].title);
+							if (weatherInfo.trafficIncidents.incidents[4].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#3DD135")};
+							$('.info-slide-content.traffic-report .impact-top').text(weatherInfo.trafficIncidents.incidents[4].impact);
+							$('.info-slide-content.traffic-report .description-top').text("           " +weatherInfo.trafficIncidents.incidents[4].fulldesc);
+							hideBottom();
+							}, 250)
+						
+							$('.info-slide-content.traffic-report').fadeIn(250);
+						}, slideDelay);
+					}, slideDelay);
+					setTimeout(function() {
+						$('.info-slide-content.traffic-report').fadeOut(500).promise().done(function(){
+							wait(0);
+						});
+					}, slideDelay*3);
+				} else if (weatherInfo.trafficIncidents.incidentcount >= 6) {
+					$('.info-slide-content.traffic-report .thing-top .thingtext').text(weatherInfo.trafficIncidents.incidents[0].title);
+					if (weatherInfo.trafficIncidents.incidents[0].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#3DD135")};
+					$('.info-slide-content.traffic-report .impact-top').text(weatherInfo.trafficIncidents.incidents[0].impact);
+					$('.info-slide-content.traffic-report .description-top').text("           " +weatherInfo.trafficIncidents.incidents[0].fulldesc);
+					$('.info-slide-content.traffic-report .thing-bot .thingtext').text(weatherInfo.trafficIncidents.incidents[1].title);
+					if (weatherInfo.trafficIncidents.incidents[1].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#3DD135")};
+					$('.info-slide-content.traffic-report .impact-bot').text(weatherInfo.trafficIncidents.incidents[1].impact);
+					$('.info-slide-content.traffic-report .description-bot').text("           " +weatherInfo.trafficIncidents.incidents[1].fulldesc);
+					showBottom();
+
+					$('.info-slide-content.traffic-report').fadeIn(500);
+
+					setTimeout(function() {
+						$('.info-slide-content.traffic-report').fadeOut(250);
+					}, slideDelay);
+
+					setTimeout(function() {
+						setTimeout(function() {
+						$('.info-slide-content.traffic-report .thing-top .thingtext').text(weatherInfo.trafficIncidents.incidents[2].title);
+						if (weatherInfo.trafficIncidents.incidents[2].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#3DD135")};
+						$('.info-slide-content.traffic-report .impact-top').text(weatherInfo.trafficIncidents.incidents[2].impact);
+						$('.info-slide-content.traffic-report .description-top').text("           " +weatherInfo.trafficIncidents.incidents[2].fulldesc);
+						$('.info-slide-content.traffic-report .thing-bot .thingtext').text(weatherInfo.trafficIncidents.incidents[3].title);
+						if (weatherInfo.trafficIncidents.incidents[3].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#3DD135")};
+						$('.info-slide-content.traffic-report .impact-bot').text(weatherInfo.trafficIncidents.incidents[3].impact);
+						$('.info-slide-content.traffic-report .description-bot').text("           " +weatherInfo.trafficIncidents.incidents[3].fulldesc);
+						showBottom();
+						}, 250)
+						
+						$('.info-slide-content.traffic-report').fadeIn(250);
+
+						setTimeout(function() {
+							$('.info-slide-content.traffic-report').fadeOut(250);
+						}, slideDelay);	
+						setTimeout(function() {
+							setTimeout(function() {
+							$('.info-slide-content.traffic-report .thing-top .thingtext').text(weatherInfo.trafficIncidents.incidents[4].title);
+							if (weatherInfo.trafficIncidents.incidents[4].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#3DD135")};
+							$('.info-slide-content.traffic-report .impact-top').text(weatherInfo.trafficIncidents.incidents[4].impact);
+							$('.info-slide-content.traffic-report .description-top').text("           " +weatherInfo.trafficIncidents.incidents[4].fulldesc);
+							$('.info-slide-content.traffic-report .thing-bot .thingtext').text(weatherInfo.trafficIncidents.incidents[5].title);
+							if (weatherInfo.trafficIncidents.incidents[5].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#3DD135")};
+							$('.info-slide-content.traffic-report .impact-bot').text(weatherInfo.trafficIncidents.incidents[5].impact);
+							$('.info-slide-content.traffic-report .description-bot').text("           " +weatherInfo.trafficIncidents.incidents[5].fulldesc);
+							showBottom();
+							}, 250)
+						
+							$('.info-slide-content.traffic-report').fadeIn(250);
+						}, slideDelay);
+					}, slideDelay);
+
+					setTimeout(function() {
+						$('.info-slide-content.traffic-report').fadeOut(500).promise().done(function(){
+							wait(0);
+						});
+					}, slideDelay*3);
+				}
+
+
+				
+
+
+				/*setTimeout(function() {
+					$('.info-slide-content.traffic-report').fadeOut(500).promise().done(function(){
+						wait(0);
+					});
+				}, slideDelay*3);*/
+
+
+
+
+					/*$('.info-slide-content.traffic-report .thing-top .thingtext').text(weatherInfo.trafficIncidents.incidents[0].title);
+					if (weatherInfo.trafficIncidents.incidents[0].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-top').css("background-color", "#3DD135")};
+					$('.info-slide-content.traffic-report .impact-top').text(weatherInfo.trafficIncidents.incidents[0].impact);
+					$('.info-slide-content.traffic-report .description-top').text("           " +weatherInfo.trafficIncidents.incidents[0].fulldesc);
+					$('.info-slide-content.traffic-report .thing-bot .thingtext').text(weatherInfo.trafficIncidents.incidents[1].title);
+					if (weatherInfo.trafficIncidents.incidents[0].impact === "MEDIUM IMPACT ") {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#E6EC46")} else if ((weatherInfo.trafficIncidents.incidents[0].impact === "HIGH IMPACT ")) {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#FE2C2D")} else {$('.info-slide-content.traffic-report .impact-bot').css("background-color", "#3DD135")};
+					$('.info-slide-content.traffic-report .impact-bot').text(weatherInfo.trafficIncidents.incidents[1].impact);
+					$('.info-slide-content.traffic-report .description-bot').text("           " +weatherInfo.trafficIncidents.incidents[1].fulldesc);
+*/
+
+					
+			},
 			healthIntro() {
 				$('.health-slide-intro .accent').fadeIn(500);
 				$('.health-slide-intro .weatherscanmarquee').fadeIn(500);
@@ -1012,6 +1782,230 @@ var mainMap
 					});
 				}, 5000);
 			}
+			,travelWeather() {
+				$('.info-slide.destinationmap-slide').fadeIn(0);
+				$('.info-slide.destinationmap-slide .info-slides-content.destinationmap-content .blackmaplayer').fadeOut(500);
+				$('.info-slide.destinationmap-slide .travel-legend').fadeIn(500);
+				setTimeout(function() {$('.info-slide.destinationmap-slide .travel-legend').fadeOut(500), $('.info-slide.destinationmap-slide .info-slides-content.destinationmap-content .blackmaplayer').fadeIn(500)}, slideDelay-500);
+					setTimeout(function() {
+						$('.info-slide.destinationmap-slide').fadeOut(0).promise().done(function(){
+							wait(0);
+						});
+					}, slideDelay);
+			}
+			,regionalTravel(aidx) {
+				var lol = 0;
+				var regt;
+				function positionRegMap() {
+					rt = 0
+					if (aidx != 1) {rt = 1};
+					$('.info-slide.regionaldest-slide .info-subheader .subhead-title').text(weatherInfo.regionalTravel.cities[0].days[rt].dayName + ' Forecast');
+					if (maincitycoords.state === "ME" || maincitycoords.state === "NH" || maincitycoords.state === "VT" || maincitycoords.state === "MA" || maincitycoords.state === "NY") {
+						lol = 0;
+						$('.regionaldest-content .clusters .cluster.one .ctitle').text(weatherInfo.regionalTravel.cities[0+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.one .chigh').text(weatherInfo.regionalTravel.cities[0+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.one .cicon'), weatherInfo.regionalTravel.cities[0+lol].days[rt].icon, weatherInfo.regionalTravel.cities[0+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.two .ctitle').text(weatherInfo.regionalTravel.cities[1+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.two .chigh').text(weatherInfo.regionalTravel.cities[1+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.two .cicon'), weatherInfo.regionalTravel.cities[1+lol].days[rt].icon, weatherInfo.regionalTravel.cities[1+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.three .ctitle').text(weatherInfo.regionalTravel.cities[2+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.three .chigh').text(weatherInfo.regionalTravel.cities[2+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.three .cicon'), weatherInfo.regionalTravel.cities[2+lol].days[rt].icon, weatherInfo.regionalTravel.cities[2+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.four .ctitle').text(weatherInfo.regionalTravel.cities[3+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.four .chigh').text(weatherInfo.regionalTravel.cities[3+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.four .cicon'), weatherInfo.regionalTravel.cities[3+lol].days[rt].icon, weatherInfo.regionalTravel.cities[3+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.five .ctitle').text(weatherInfo.regionalTravel.cities[4+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.five .chigh').text(weatherInfo.regionalTravel.cities[4+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.five .cicon'), weatherInfo.regionalTravel.cities[4+lol].days[rt].icon, weatherInfo.regionalTravel.cities[4+lol].days[rt].windspeed);
+					} else if (maincitycoords.state === "NJ" || maincitycoords.state === "PA" || maincitycoords.state === "DE" || maincitycoords.state === "CT" || maincitycoords.state === "RI" || maincitycoords.state === "WV" || maincitycoords.state === "OH" || maincitycoords.state === "VA" || maincitycoords.state === "DC" || maincitycoords.state === "MD" || maincitycoords.state === "KY") {
+						lol = 5;
+						$('.regionaldest-content .clusters .cluster.one .ctitle').text(weatherInfo.regionalTravel.cities[0+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.one .chigh').text(weatherInfo.regionalTravel.cities[0+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.one .cicon'), weatherInfo.regionalTravel.cities[0+lol].days[rt].icon, weatherInfo.regionalTravel.cities[0+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.two .ctitle').text(weatherInfo.regionalTravel.cities[1+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.two .chigh').text(weatherInfo.regionalTravel.cities[1+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.two .cicon'), weatherInfo.regionalTravel.cities[1+lol].days[rt].icon, weatherInfo.regionalTravel.cities[1+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.three .ctitle').text(weatherInfo.regionalTravel.cities[2+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.three .chigh').text(weatherInfo.regionalTravel.cities[2+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.three .cicon'), weatherInfo.regionalTravel.cities[2+lol].days[rt].icon, weatherInfo.regionalTravel.cities[2+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.four .ctitle').text(weatherInfo.regionalTravel.cities[3+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.four .chigh').text(weatherInfo.regionalTravel.cities[3+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.four .cicon'), weatherInfo.regionalTravel.cities[3+lol].days[rt].icon, weatherInfo.regionalTravel.cities[3+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.five .ctitle').text(weatherInfo.regionalTravel.cities[4+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.five .chigh').text(weatherInfo.regionalTravel.cities[4+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.five .cicon'), weatherInfo.regionalTravel.cities[4+lol].days[rt].icon, weatherInfo.regionalTravel.cities[4+lol].days[rt].windspeed);
+					} else if (maincitycoords.state === "NC" || maincitycoords.state === "SC" ||maincitycoords.state ===  "GA" || maincitycoords.state === "TN" || maincitycoords.state === "AL" || maincitycoords.state === "MS" || maincitycoords.state === "LA" || maincitycoords.state === "AR") {
+						lol = 10;
+						$('.regionaldest-content .clusters .cluster.one .ctitle').text(weatherInfo.regionalTravel.cities[0+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.one .chigh').text(weatherInfo.regionalTravel.cities[0+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.one .cicon'), weatherInfo.regionalTravel.cities[0+lol].days[rt].icon, weatherInfo.regionalTravel.cities[0+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.two .ctitle').text(weatherInfo.regionalTravel.cities[1+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.two .chigh').text(weatherInfo.regionalTravel.cities[1+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.two .cicon'), weatherInfo.regionalTravel.cities[1+lol].days[rt].icon, weatherInfo.regionalTravel.cities[1+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.three .ctitle').text(weatherInfo.regionalTravel.cities[2+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.three .chigh').text(weatherInfo.regionalTravel.cities[2+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.three .cicon'), weatherInfo.regionalTravel.cities[2+lol].days[rt].icon, weatherInfo.regionalTravel.cities[2+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.four .ctitle').text(weatherInfo.regionalTravel.cities[3+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.four .chigh').text(weatherInfo.regionalTravel.cities[3+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.four .cicon'), weatherInfo.regionalTravel.cities[3+lol].days[rt].icon, weatherInfo.regionalTravel.cities[3+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.five .ctitle').text(weatherInfo.regionalTravel.cities[4+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.five .chigh').text(weatherInfo.regionalTravel.cities[4+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.five .cicon'), weatherInfo.regionalTravel.cities[4+lol].days[rt].icon, weatherInfo.regionalTravel.cities[4+lol].days[rt].windspeed);
+					} else if (maincitycoords.state === "FL") {
+						lol = 15;
+						$('.regionaldest-content .clusters .cluster.one .ctitle').text(weatherInfo.regionalTravel.cities[0+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.one .chigh').text(weatherInfo.regionalTravel.cities[0+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.one .cicon'), weatherInfo.regionalTravel.cities[0+lol].days[rt].icon, weatherInfo.regionalTravel.cities[0+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.two .ctitle').text(weatherInfo.regionalTravel.cities[1+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.two .chigh').text(weatherInfo.regionalTravel.cities[1+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.two .cicon'), weatherInfo.regionalTravel.cities[1+lol].days[rt].icon, weatherInfo.regionalTravel.cities[1+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.three .ctitle').text(weatherInfo.regionalTravel.cities[2+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.three .chigh').text(weatherInfo.regionalTravel.cities[2+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.three .cicon'), weatherInfo.regionalTravel.cities[2+lol].days[rt].icon, weatherInfo.regionalTravel.cities[2+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.four .ctitle').text(weatherInfo.regionalTravel.cities[3+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.four .chigh').text(weatherInfo.regionalTravel.cities[3+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.four .cicon'), weatherInfo.regionalTravel.cities[3+lol].days[rt].icon, weatherInfo.regionalTravel.cities[3+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.five .ctitle').text(weatherInfo.regionalTravel.cities[4+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.five .chigh').text(weatherInfo.regionalTravel.cities[4+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.five .cicon'), weatherInfo.regionalTravel.cities[4+lol].days[rt].icon, weatherInfo.regionalTravel.cities[4+lol].days[rt].windspeed);
+					} else if (maincitycoords.state === "IN" || maincitycoords.state === "IL" || maincitycoords.state === "MO" || maincitycoords.state === "IA" || maincitycoords.state === "KS" || maincitycoords.state === "NE") {
+						lol = 20;
+						$('.regionaldest-content .clusters .cluster.one .ctitle').text(weatherInfo.regionalTravel.cities[0+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.one .chigh').text(weatherInfo.regionalTravel.cities[0+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.one .cicon'), weatherInfo.regionalTravel.cities[0+lol].days[rt].icon, weatherInfo.regionalTravel.cities[0+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.two .ctitle').text(weatherInfo.regionalTravel.cities[1+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.two .chigh').text(weatherInfo.regionalTravel.cities[1+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.two .cicon'), weatherInfo.regionalTravel.cities[1+lol].days[rt].icon, weatherInfo.regionalTravel.cities[1+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.three .ctitle').text(weatherInfo.regionalTravel.cities[2+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.three .chigh').text(weatherInfo.regionalTravel.cities[2+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.three .cicon'), weatherInfo.regionalTravel.cities[2+lol].days[rt].icon, weatherInfo.regionalTravel.cities[2+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.four .ctitle').text(weatherInfo.regionalTravel.cities[3+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.four .chigh').text(weatherInfo.regionalTravel.cities[3+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.four .cicon'), weatherInfo.regionalTravel.cities[3+lol].days[rt].icon, weatherInfo.regionalTravel.cities[3+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.five .ctitle').text(weatherInfo.regionalTravel.cities[4+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.five .chigh').text(weatherInfo.regionalTravel.cities[4+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.five .cicon'), weatherInfo.regionalTravel.cities[4+lol].days[rt].icon, weatherInfo.regionalTravel.cities[4+lol].days[rt].windspeed);
+					} else if (maincitycoords.state === "AZ" || maincitycoords.state === "NM" || maincitycoords.state === "TX" || maincitycoords.state === "OK") {
+						lol = 25;
+						$('.regionaldest-content .clusters .cluster.one .ctitle').text(weatherInfo.regionalTravel.cities[0+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.one .chigh').text(weatherInfo.regionalTravel.cities[0+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.one .cicon'), weatherInfo.regionalTravel.cities[0+lol].days[rt].icon, weatherInfo.regionalTravel.cities[0+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.two .ctitle').text(weatherInfo.regionalTravel.cities[1+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.two .chigh').text(weatherInfo.regionalTravel.cities[1+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.two .cicon'), weatherInfo.regionalTravel.cities[1+lol].days[rt].icon, weatherInfo.regionalTravel.cities[1+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.three .ctitle').text(weatherInfo.regionalTravel.cities[2+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.three .chigh').text(weatherInfo.regionalTravel.cities[2+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.three .cicon'), weatherInfo.regionalTravel.cities[2+lol].days[rt].icon, weatherInfo.regionalTravel.cities[2+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.four .ctitle').text(weatherInfo.regionalTravel.cities[3+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.four .chigh').text(weatherInfo.regionalTravel.cities[3+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.four .cicon'), weatherInfo.regionalTravel.cities[3+lol].days[rt].icon, weatherInfo.regionalTravel.cities[3+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.five .ctitle').text(weatherInfo.regionalTravel.cities[4+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.five .chigh').text(weatherInfo.regionalTravel.cities[4+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.five .cicon'), weatherInfo.regionalTravel.cities[4+lol].days[rt].icon, weatherInfo.regionalTravel.cities[4+lol].days[rt].windspeed);
+					} else if (maincitycoords.state === "NV" || maincitycoords.state === "CO" || maincitycoords.state === "UT" || maincitycoords.state === "WY") {
+						lol = 30;
+						$('.regionaldest-content .clusters .cluster.one .ctitle').text(weatherInfo.regionalTravel.cities[0+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.one .chigh').text(weatherInfo.regionalTravel.cities[0+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.one .cicon'), weatherInfo.regionalTravel.cities[0+lol].days[rt].icon, weatherInfo.regionalTravel.cities[0+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.two .ctitle').text(weatherInfo.regionalTravel.cities[1+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.two .chigh').text(weatherInfo.regionalTravel.cities[1+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.two .cicon'), weatherInfo.regionalTravel.cities[1+lol].days[rt].icon, weatherInfo.regionalTravel.cities[1+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.three .ctitle').text(weatherInfo.regionalTravel.cities[2+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.three .chigh').text(weatherInfo.regionalTravel.cities[2+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.three .cicon'), weatherInfo.regionalTravel.cities[2+lol].days[rt].icon, weatherInfo.regionalTravel.cities[2+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.four .ctitle').text(weatherInfo.regionalTravel.cities[3+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.four .chigh').text(weatherInfo.regionalTravel.cities[3+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.four .cicon'), weatherInfo.regionalTravel.cities[3+lol].days[rt].icon, weatherInfo.regionalTravel.cities[3+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.five .ctitle').text(weatherInfo.regionalTravel.cities[4+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.five .chigh').text(weatherInfo.regionalTravel.cities[4+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.five .cicon'), weatherInfo.regionalTravel.cities[4+lol].days[rt].icon, weatherInfo.regionalTravel.cities[4+lol].days[rt].windspeed);
+					} else if (maincitycoords.state === "MT" || maincitycoords.state === "WA" || maincitycoords.state === "OR" || maincitycoords.state === "ID") {
+						lol = 35;
+						$('.regionaldest-content .clusters .cluster.one .ctitle').text(weatherInfo.regionalTravel.cities[0+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.one .chigh').text(weatherInfo.regionalTravel.cities[0+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.one .cicon'), weatherInfo.regionalTravel.cities[0+lol].days[rt].icon, weatherInfo.regionalTravel.cities[0+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.two .ctitle').text(weatherInfo.regionalTravel.cities[1+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.two .chigh').text(weatherInfo.regionalTravel.cities[1+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.two .cicon'), weatherInfo.regionalTravel.cities[1+lol].days[rt].icon, weatherInfo.regionalTravel.cities[1+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.three .ctitle').text(weatherInfo.regionalTravel.cities[2+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.three .chigh').text(weatherInfo.regionalTravel.cities[2+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.three .cicon'), weatherInfo.regionalTravel.cities[2+lol].days[rt].icon, weatherInfo.regionalTravel.cities[2+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.four .ctitle').text(weatherInfo.regionalTravel.cities[3+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.four .chigh').text(weatherInfo.regionalTravel.cities[3+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.four .cicon'), weatherInfo.regionalTravel.cities[3+lol].days[rt].icon, weatherInfo.regionalTravel.cities[3+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.five .ctitle').text(weatherInfo.regionalTravel.cities[4+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.five .chigh').text(weatherInfo.regionalTravel.cities[4+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.five .cicon'), weatherInfo.regionalTravel.cities[4+lol].days[rt].icon, weatherInfo.regionalTravel.cities[4+lol].days[rt].windspeed);
+					} else if (maincitycoords.state === "CA") {
+						lol = 40;
+						$('.regionaldest-content .clusters .cluster.one .ctitle').text(weatherInfo.regionalTravel.cities[0+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.one .chigh').text(weatherInfo.regionalTravel.cities[0+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.one .cicon'), weatherInfo.regionalTravel.cities[0+lol].days[rt].icon, weatherInfo.regionalTravel.cities[0+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.two .ctitle').text(weatherInfo.regionalTravel.cities[1+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.two .chigh').text(weatherInfo.regionalTravel.cities[1+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.two .cicon'), weatherInfo.regionalTravel.cities[1+lol].days[rt].icon, weatherInfo.regionalTravel.cities[1+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.three .ctitle').text(weatherInfo.regionalTravel.cities[2+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.three .chigh').text(weatherInfo.regionalTravel.cities[2+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.three .cicon'), weatherInfo.regionalTravel.cities[2+lol].days[rt].icon, weatherInfo.regionalTravel.cities[2+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.four .ctitle').text(weatherInfo.regionalTravel.cities[3+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.four .chigh').text(weatherInfo.regionalTravel.cities[3+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.four .cicon'), weatherInfo.regionalTravel.cities[3+lol].days[rt].icon, weatherInfo.regionalTravel.cities[3+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.five .ctitle').text(weatherInfo.regionalTravel.cities[4+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.five .chigh').text(weatherInfo.regionalTravel.cities[4+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.five .cicon'), weatherInfo.regionalTravel.cities[4+lol].days[rt].icon, weatherInfo.regionalTravel.cities[4+lol].days[rt].windspeed);
+					} else if (maincitycoords.state === "ND" || maincitycoords.state === "SD" || maincitycoords.state === "WI" || maincitycoords.state === "MI" || maincitycoords.state === "MN") {
+						lol = 45;
+						$('.regionaldest-content .clusters .cluster.one .ctitle').text(weatherInfo.regionalTravel.cities[0+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.one .chigh').text(weatherInfo.regionalTravel.cities[0+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.one .cicon'), weatherInfo.regionalTravel.cities[0+lol].days[rt].icon, weatherInfo.regionalTravel.cities[0+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.two .ctitle').text(weatherInfo.regionalTravel.cities[1+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.two .chigh').text(weatherInfo.regionalTravel.cities[1+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.two .cicon'), weatherInfo.regionalTravel.cities[1+lol].days[rt].icon, weatherInfo.regionalTravel.cities[1+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.three .ctitle').text(weatherInfo.regionalTravel.cities[2+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.three .chigh').text(weatherInfo.regionalTravel.cities[2+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.three .cicon'), weatherInfo.regionalTravel.cities[2+lol].days[rt].icon, weatherInfo.regionalTravel.cities[2+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.four .ctitle').text(weatherInfo.regionalTravel.cities[3+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.four .chigh').text(weatherInfo.regionalTravel.cities[3+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.four .cicon'), weatherInfo.regionalTravel.cities[3+lol].days[rt].icon, weatherInfo.regionalTravel.cities[3+lol].days[rt].windspeed);
+						$('.regionaldest-content .clusters .cluster.five .ctitle').text(weatherInfo.regionalTravel.cities[4+lol].displayname);
+						$('.regionaldest-content .clusters .cluster.five .chigh').text(weatherInfo.regionalTravel.cities[4+lol].days[rt].high);
+						getCCicon($('.regionaldest-content .clusters .cluster.five .cicon'), weatherInfo.regionalTravel.cities[4+lol].days[rt].icon, weatherInfo.regionalTravel.cities[4+lol].days[rt].windspeed);
+					} else {
+						$('.regionaldest-slide .tempunavailable').fadeIn(500)
+					}
+				}
+				aidx = (aidx===undefined ? 1 : aidx);
+				positionRegMap();
+				if (aidx === 1) {
+					weatherAudio.playRegionalforecast();
+				}
+				if (aidx <= 1) {
+					$('.info-slide.regionaldest-slide').fadeIn(0);
+					$('.info-slide.regionaldest-slide .info-subheader .subhead-title').fadeIn(500);
+					$('.info-slides-content .clusters').fadeIn(500);
+				} else {
+					$('.info-slide.regionaldest-slide .info-subheader .subhead-title').fadeIn(250);
+					$('.info-slides-content .clusters').fadeIn(250);
+				}
+				setTimeout(function() {
+					if (aidx==2) {
+						$('.info-slide.regionaldest-slide .info-subheader .subhead-title').fadeOut(500);
+						$('.info-slides-content.regionaldest-content .clusters').fadeOut(500);
+					}
+				}, slideDelay-500);
+				setTimeout(function() {
+					if (aidx<2) {
+						$('.info-slide.regionaldest-slide .info-subheader .subhead-title').fadeOut(250);
+						$('.info-slides-content.regionaldest-content .clusters').fadeOut(250).promise().done(function(){
+							currentDisplay(aidx+1);
+						});
+					} else {
+						$('.info-slide.regionaldest-slide').fadeOut(0).promise().done(function(){
+							wait(0);
+						});
+					}
+					}, slideDelay);
+			}
 			,destinationForecast(aidx) {
 				var pages = Math.ceil(weatherInfo.travel.cities.length/3);
 				if (weatherInfo.travel.noReport == true) {
@@ -1206,7 +2200,7 @@ var mainMap
 				setTimeout(function() {
 					$('.city-slide-intro .weatherscancopyright .copyrighttext').fadeOut(500).promise().done(function(){
 						$('.city-slide-intro .weatherscancopyright .copyrighttext').css('font-size','15px')
-						$('.city-slide-intro .weatherscancopyright .copyrighttext').text(`© ${new Date().getFullYear()} Weather Group Television LLC All Rights Reserved`)
+						$('.city-slide-intro .weatherscancopyright .copyrighttext').text(`© ${new Date().getFullYear()} Weather Group Television LLC All Rights Reserved, Custom Emulation created by WeatherTV by SketchyLiy`)
 						$('.city-slide-intro .weatherscancopyright .copyrighttext').fadeIn(500);
 					});
 				}, 5000);
@@ -1217,7 +2211,7 @@ var mainMap
 					$('.city-slide-intro .cityweatherscanmarquee').fadeOut(500).promise().done(function(){
 						$('.city-slide-intro').fadeOut(0);
 						$('.city-slide-intro .weatherscancopyright .copyrighttext').css('font-size','28px')
-						$('.city-slide-intro .weatherscancopyright .copyrighttext').text("Weatherscan is brought to you by The Weather Channel® and MIDCO")
+						$('.city-slide-intro .weatherscancopyright .copyrighttext').text("Weatherscan is brought to you by The Weather Channel® and RockPawsMedia®")
 						wait(0);
 					});
 				}, 10000);
@@ -1565,7 +2559,6 @@ var mainMap
 				} else {
 					moveHeader++
 					const prevDivs = $(header + ' .city.current').prevAll()
-					console.log($(header + ' .city.current').nextAll('.city').add(header + ' .city.current'))
 					divTest = $(header + ' .city.current').nextAll('.city').add(header + ' .city.current')[moveHeader]
 				}
 				keys = JSON.parse(divTest.dataset.slideorder)
@@ -1575,7 +2568,7 @@ var mainMap
 				//reset skip for next go around.
 				keys[idx].skipped = false
 				divTest.dataset.slideorder = JSON.stringify(keys)
-				console.log(divTest.dataset.slideorder)
+				
 				idx++;
 				grabTestDiv()
 			}
@@ -1635,7 +2628,7 @@ var mainMap
 					var ogSlide
 					if (!keysNext[preloadIdx].originalSlide) {
 						ogSlide = JSON.parse(divTestNext.dataset.slideorder)
-						console.log(ogSlide[preloadIdx])
+						
 					}
 					keysNext[preloadIdx] = keysNext[preloadIdx].alternate
 					keysNext[preloadIdx].originalSlide = ogSlide[preloadIdx]
@@ -1662,12 +2655,12 @@ var mainMap
 				$(maindiv[keys[idx].name]).fadeIn(0)
 			}
 			if (mainDivHeaders[keys[idx].name] != '') $(maindiv[keys[idx].name] + ' .subhead-title').text(mainDivHeaders[keys[idx].name].replace('*daytitle*',weatherInfo.dayPart.weatherLocs[location].daytitle).replace('*none*',''));
-			if (mainDivCityHeaders[keys[idx].name] != '') $(maindiv[keys[idx].name] + ' #subhead-city').text(mainDivCityHeaders[keys[idx].name].replace('*currentConditionsLocation*',weatherInfo.currentCond.weatherLocs[location].displayname).replace('*dayPartLocation*',weatherInfo.dayPart.weatherLocs[location].displayname).replace('*dayDescLocation*',weatherInfo.dayDesc.weatherLocs[location].displayname).replace('*extendedForecastLocation*',weatherInfo.fiveDay.weatherLocs[location].displayname).replace('*almanacLocation*',weatherInfo.almanac.displayname).replace('*none*','').replace('*currentConditionsEnding*',slideApperanceSettings.currentConditions.cityHeaderEnding).replace('*dayPartEnding*',slideApperanceSettings.dayPart.cityHeaderEnding).replace('*dayDescEnding*',slideApperanceSettings.dayPart.cityHeaderEnding).replace('*extendedForecastEnding*',slideApperanceSettings.extendedForecast.cityHeaderEnding).replace('*almanacEnding*',slideApperanceSettings.almanac.cityHeaderEnding).replace('*healthlocation*',weatherInfo.healthforecast.displayname));
+			if (mainDivCityHeaders[keys[idx].name] != '') $(maindiv[keys[idx].name] + ' #subhead-city').text(mainDivCityHeaders[keys[idx].name].replace('*currentConditionsLocation*',weatherInfo.currentCond.weatherLocs[location].displayname).replace('*dayPartLocation*',weatherInfo.dayPart.weatherLocs[location].displayname).replace('*dayDescLocation*',weatherInfo.dayDesc.weatherLocs[location].displayname).replace('*extendedForecastLocation*',weatherInfo.fiveDay.weatherLocs[location].displayname).replace('*almanacLocation*',weatherInfo.almanac.displayname).replace('*none*','').replace('*currentConditionsEnding*',slideApperanceSettings.currentConditions.cityHeaderEnding).replace('*dayPartEnding*',slideApperanceSettings.dayPart.cityHeaderEnding).replace('*dayDescEnding*',slideApperanceSettings.dayPart.cityHeaderEnding).replace('*extendedForecastEnding*',slideApperanceSettings.extendedForecast.cityHeaderEnding).replace('*almanacEnding*',slideApperanceSettings.almanac.cityHeaderEnding).replace('*healthlocation*',weatherInfo.healthforecast.displayname).replace('*trafficarea*',(maincitycoords.displayname + " Area")).replace('*golfarea*',(maincitycoords.displayname)));
 		}
 		//preload if the next info-slide is not the same.
 		if (maindiv[keys[idx].name] != maindiv[keysNext[preloadIdx].name]) {
 			if (mainDivHeaders[keysNext[preloadIdx].name] != '') $(maindiv[keysNext[preloadIdx].name] + ' .subhead-title').text(mainDivHeaders[keysNext[preloadIdx].name].replace('*daytitle*',weatherInfo.dayPart.weatherLocs[location].daytitle).replace('*none*',''));
-			if (mainDivCityHeaders[keysNext[preloadIdx].name] != '') $(maindiv[keysNext[preloadIdx].name] + ' #subhead-city').text(mainDivCityHeaders[keysNext[preloadIdx].name].replace('*currentConditionsLocation*',weatherInfo.currentCond.weatherLocs[location].displayname).replace('*dayPartLocation*',weatherInfo.dayPart.weatherLocs[location].displayname).replace('*dayDescLocation*',weatherInfo.dayDesc.weatherLocs[location].displayname).replace('*extendedForecastLocation*',weatherInfo.fiveDay.weatherLocs[location].displayname).replace('*almanacLocation*',weatherInfo.almanac.displayname).replace('*none*','').replace('*currentConditionsEnding*',slideApperanceSettings.currentConditions.cityHeaderEnding).replace('*dayPartEnding*',slideApperanceSettings.dayPart.cityHeaderEnding).replace('*dayDescEnding*',slideApperanceSettings.dayPart.cityHeaderEnding).replace('*extendedForecastEnding*',slideApperanceSettings.extendedForecast.cityHeaderEnding).replace('*almanacEnding*',slideApperanceSettings.almanac.cityHeaderEnding).replace('*healthlocation*',weatherInfo.healthforecast.displayname));
+			if (mainDivCityHeaders[keysNext[preloadIdx].name] != '') $(maindiv[keysNext[preloadIdx].name] + ' #subhead-city').text(mainDivCityHeaders[keysNext[preloadIdx].name].replace('*currentConditionsLocation*',weatherInfo.currentCond.weatherLocs[location].displayname).replace('*dayPartLocation*',weatherInfo.dayPart.weatherLocs[location].displayname).replace('*dayDescLocation*',weatherInfo.dayDesc.weatherLocs[location].displayname).replace('*extendedForecastLocation*',weatherInfo.fiveDay.weatherLocs[location].displayname).replace('*almanacLocation*',weatherInfo.almanac.displayname).replace('*none*','').replace('*currentConditionsEnding*',slideApperanceSettings.currentConditions.cityHeaderEnding).replace('*dayPartEnding*',slideApperanceSettings.dayPart.cityHeaderEnding).replace('*dayDescEnding*',slideApperanceSettings.dayPart.cityHeaderEnding).replace('*extendedForecastEnding*',slideApperanceSettings.extendedForecast.cityHeaderEnding).replace('*almanacEnding*',slideApperanceSettings.almanac.cityHeaderEnding).replace('*healthlocation*',weatherInfo.healthforecast.displayname).replace('*trafficarea*',(maincitycoords.displayname + " Area")).replace('*golfarea*',(maincitycoords.displayname)));
 			$(maindiv[keysNext[preloadIdx].name]).addClass("preload")
 			$(maindiv[keysNext[preloadIdx].name]).fadeIn(0)
 		}
@@ -1783,7 +2776,6 @@ var mainMap
 			function(){
 				// on completion, move the old one to the end
 				$scroller.css('left','');
-				console.log($cities)
 				for (var i = 0; i < $prevCities.length; i++) {
 					if ($prevCities[i].dataset.repeat == true || $prevCities[i].dataset.repeat == 'true') {
 						$(header + ' .hscroller').append('<span class="divider-arrow" style="font-family: Zemestro Std ">&lt;</span>')
@@ -1813,12 +2805,14 @@ var mainMap
 				"severe-cities":'<span class="city severe" data-slide="severe" data-divOrder="'+slideVal+ ((loopComplete == true) ? '" data-loopComplete="true"':'"')+' data-locIdx="'+locIdxVal+'" data-repeat="'+repeatVal+'" data-slideDelay="'+slideDelayVal+'"' + `data-slideOrder='${slideOrderVal}'>` + ((locIdxVal == 0) ? maincitycoords.displayname : locList[locIdxVal-1].displayname)+ '</span>',
 				"cities":'<span class="city" data-slide="city" data-divOrder="'+slideVal+ ((loopComplete == true) ? '" data-loopComplete="true"':'"')+' data-locIdx="'+locIdxVal+'" data-repeat="'+repeatVal+'" data-slideDelay="'+slideDelayVal+'"' + `data-slideOrder='${slideOrderVal}'>` + ((locIdxVal == 0) ? maincitycoords.displayname : locList[locIdxVal-1].displayname)+ '</span>',
 				"radar":'<span class="city radar" data-slide="radar" data-divOrder="'+slideVal+ ((loopComplete == true) ? '" data-loopComplete="true"':'"')+' data-locIdx="'+locIdxVal+'" data-repeat="'+repeatVal+'" data-slideDelay="'+slideDelayVal+'"' + `data-slideOrder='${slideOrderVal}'>LOCAL RADAR</span>`,
-				"golf":'<span class="city golf" data-slide="golf" data-divOrder="'+slideVal+ ((loopComplete == true) ? '" data-loopComplete="true"':'"')+' data-locIdx="'+locIdxVal+'" data-repeat="'+repeatVal+'" data-slideDelay="'+slideDelayVal+'"' + `data-slideOrder='${slideOrderVal}'>GOLF</span>`,
+				"golf":'<span class="city golff" data-slide="golff" data-divOrder="'+slideVal+ ((loopComplete == true) ? '" data-loopComplete="true"':'"')+' data-locIdx="'+locIdxVal+'" data-repeat="'+repeatVal+'" data-slideDelay="'+slideDelayVal+'"' + `data-slideOrder='${slideOrderVal}'>GOLF</span>`,
 				"beach":'<span class="city beach" data-slide="beach" data-divOrder="'+slideVal+ ((loopComplete == true) ? '" data-loopComplete="true"':'"')+' data-locIdx="'+locIdxVal+'" data-repeat="'+repeatVal+'" data-slideDelay="'+slideDelayVal+'"' + `data-slideOrder='${slideOrderVal}'>BOAT & BEACH</span>`,
+				"traffic":'<span class="city trafficc" data-slide="trafficc" data-divOrder="'+slideVal+ ((loopComplete == true) ? '" data-loopComplete="true"':'"')+' data-locIdx="'+locIdxVal+'" data-repeat="'+repeatVal+'" data-slideDelay="'+slideDelayVal+'"' + `data-slideOrder='${slideOrderVal}'>TRAFFIC</span>`,
 				"health":'<span class="city healthh" data-slide="healthh" data-divOrder="'+slideVal+ ((loopComplete == true) ? '" data-loopComplete="true"':'"')+' data-locIdx="'+locIdxVal+'" data-repeat="'+repeatVal+'" data-slideDelay="'+slideDelayVal+'"' + `data-slideOrder='${slideOrderVal}'>HEALTH</span>`,
 				"airport":'<span class="city airport" data-slide="airport" data-divOrder="'+slideVal+ ((loopComplete == true) ? '" data-loopComplete="true"':'"')+' data-locIdx="'+locIdxVal+'" data-repeat="'+repeatVal+'" data-slideDelay="'+slideDelayVal+'"' + `data-slideOrder='${slideOrderVal}'>AIRPORTS</span>`,
 				"travel":'<span class="city travell" data-slide="travell" data-divOrder="'+slideVal+ ((loopComplete == true) ? '" data-loopComplete="true"':'"')+' data-locIdx="'+locIdxVal+'" data-repeat="'+repeatVal+'" data-slideDelay="'+slideDelayVal+'"' + `data-slideOrder='${slideOrderVal}'>TRAVEL</span>`,
 				"international":'<span class="city internationall" data-slide="internationall" data-divOrder="'+slideVal+ ((loopComplete == true) ? '" data-loopComplete="true"':'"')+' data-locIdx="'+locIdxVal+'" data-repeat="'+repeatVal+'" data-slideDelay="'+slideDelayVal+'"' + `data-slideOrder='${slideOrderVal}'>INTERNATIONAL</span>`,
+				"garden":'<span class="city gardenn" data-slide="garden" data-divOrder="' +slideVal +(loopComplete == true ? '" data-loopComplete="true"' : '"') +' data-locIdx="' +locIdxVal +'" data-repeat="' +repeatVal +'" data-slideDelay="' +slideDelayVal +'"' +`data-slideOrder='${slideOrderVal}'>GARDEN</span>`,
 			}
 			return divType[divTypeVal];
 		}
@@ -1841,7 +2835,7 @@ var mainMap
 			}
 			if (slideLoopSettings.order[slide].locidx.includes('reverse')) locIdxOrder.reverse();
 			if (slideLoopSettings.order[slide].locidx.includes('random')) shuffle(locIdxOrder);
-			console.log(locIdxOrder)
+			
 			for (var loc = 0; loc < locIdxOrder.length; loc++) {
 				$('#slides-header .hscroller').append(((totalSlides > 0) ? arrow : "") + grabDiv(slideLoopSettings.order[slide].type, locIdxOrder[loc], totalSlides, ((slideLoopSettings.order[slide].repeat.length) ? slideLoopSettings.order[slide].repeat[loc % slideLoopSettings.order[slide].repeat.length] : slideLoopSettings.order[slide].repeat), ((slideLoopSettings.order[slide].slideDelay.length) ? slideLoopSettings.order[slide].slideDelay[loc % slideLoopSettings.order[slide].slideDelay.length] : slideLoopSettings.order[slide].slideDelay), ((slideLoopSettings.order[slide].slideOrders) ? JSON.stringify(slideLoopSettings.order[slide].slideOrders[loc % slideLoopSettings.order[slide].slideOrders.length]) : JSON.stringify(slideLoopSettings.order[slide].slideOrder)).replaceAll('replaceLocIdx',locIdxOrder[loc]), slideLoopSettings.order[slide].loopComplete));
 				totalSlides += 1

@@ -1,19 +1,28 @@
 //Some of the settings may or may not work as this is not a fully completed update. Mainly Appearance settings and weather variables that arent finished.
 //Input API Keys below. If no API is inputted, sim will default to no report.
-var api_key = 'YOUR_WEATHER_API_KEY';
-var map_key = 'YOUR_MAPBOX_API_KEY';
-
+var api_key = '8de2d8b3a93542c9a2d8b3a935a2c909';
+var map_key = 'pk.eyJ1Ijoic2tldGNoeWxpeXdlYXRoZXJzdHJlYW1zIiwiYSI6ImNtaGYweDhiaDAwZGUya29neHA0dDQ4MjIifQ.LniLw93i1nw-DXH_yK0flA';
+function randomKey() {
+  codeval = Math.random() * (2.9 - 0)
+  codeval = codeval.toString().substring(0,1)
+  let finalcodeval = Number(codeval);
+  var tkeys = ['O4oaqTxH53uWF2yRCknGZb367LIZvrBr',
+    'ZGbDSq2LAIgaEArstZfeMWV8HQwG2Dlu',
+    'cJG5MpqFVuqA6VfHYFcDxz2NoQOmmBVG'];
+  traf_key = tkeys[finalcodeval]
+}
+randomKey();
 //Apperance settings. Fields left blank will use defaults. Will only refresh upon reload.
 var apperanceSettings = {
-  iconSet:"2010", //2007 or 2010
-  serialNumber:"",// Ex. "TWCS02983932"
+  iconSet:"2005", //2007 or 2010 or 2005
+  serialNumber:"TWCS23821457",// Ex. "TWCS02983932"
   headinID:"", // Ex. "0298393223"
-  affilateName:"Telmex México",// Ex. "Comcast"
+  affilateName:"RockPawsMedia",// Ex. "Comcast"
   logoURL:"", //image size must be 879*184px or similar aspect ratio.
-  corebackgroud:"neighborhood", //forest, mountain, city, buildings, neighborhood, southwest, ocean. Default is buildings.
-  backgroudType:"custom", //Set to
-  backgroudURL:"https://ia600608.us.archive.org/3/items/allweatherscancitylocationbackgroundsscreens/Fort%20Worth.png", //If background type set to "custom" will use this url. URL can be a website or local file path.
-  marqueeAd: ["After just some actual basic weatherscan ahh emulation, We're now presenting, Weatherscan Revamped by SketchyLiy!, A emulation of weatherscan that uses a custom background from a specific city, Even working changes! Please contact us our community tab! Thank you for watching weatherscan!"],
+  corebackgroud:"neighborhood", //Default is buildings for a custom image. forest, mountain, city, buildings, neighborhood, southwest, ocean.
+  backgroudType:"custom",//Set to
+  backgroudURL:"",//If background type set to "custom" will use this url. URL can be a website or local file path.
+  marqueeAd: ["Welcome, so this is my first time using WeatherTV's weatherscan service!, he gaved me the emulation so i can use it forever!, Credits to him that he made it! - rock_wx"],
 }
 var slideApperanceSettings = {//Ill add more options here eventually.
   localDoppler: {},
@@ -48,6 +57,9 @@ var slideApperanceSettings = {//Ill add more options here eventually.
   uvIndex: {cityHeaderEnding: ""},
   healthTip: {cityHeaderEnding: ""},
   moreInfoImage: {cityHeaderEnding: ""},
+  trafficIntro: {},
+  trafficOverview: {cityHeaderEnding: "Area"},
+  trafficReport: {cityHeaderEnding: "Area"},
 }
 /*For locidx, all, extra, or number can be used. Random or reverse can be used with all or extra.
 All will add all the cities to the loop and extra will add all but the main.
@@ -62,25 +74,30 @@ For this to work properly, there must be two packages in the loop that are not s
 */
 var slideLoopSettings = {
   order:[
-      {type:"cities",repeat:0,locidx:0,slideDelay:10000,slideOrder:[{name:"cityIntro",slideDelay:""},{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"city8Slides",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:"return (Math.random() > 0.5) ? true : false",alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayDesc",slideDelay:""},{name:"extendedForecast",slideDelay:""},{name:"almanac",slideDelay:""}]},
-      {type:"health",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"healthIntro",slideDelay:""},{name:"healthForecast",slideDelay:""},{name:"pollen",slideDelay:"",testDisplay:"if (!weatherInfo.healthPollen.totalcat || weatherInfo.healthforecast.noReport != false) {return true}"},{name:"achesBreath",slideDelay:""},{name:"airQuality",slideDelay:""},{name:"uvIndex",slideDelay:""},{name:"healthTip",slideDelay:""},{name:"moreInfoImage",slideDelay:""}]},
-      {type:"travel",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"travelIntro",slideDelay:""},{name:"destinationForecast",slideDelay:""}]},
-      {type:"cities",repeat:0,locidx:0,slideDelay:10000,slideOrder:[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayPart",slideDelay:""},{name:"extendedForecast",slideDelay:""}]},
-      {type:"cities",repeat:true,locidx:'extra',slideDelay:10000,slideOrders:[[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayPart",slideDelay:""},{name:"extendedForecast",slideDelay:""}],[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayDesc",slideDelay:""}]]},
-      {type:"airport",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"airportIntro",slideDelay:""},{name:"airportConditions",slideDelay:""},{name:"otherAirportConds",slideDelay:""}]},
-      {type:"international",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"internationalIntro",slideDelay:""},{name:"internationalForecast",slideDelay:""}]},
-      {type:"cities",repeat:true,locidx:'extra reverse',slideDelay:10000,slideOrders:[[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayPart",slideDelay:""},{name:"extendedForecast",slideDelay:""}],[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayDesc",slideDelay:""}]]},
-      {type:"radar",repeat:0,locidx:0,slideDelay:60000,slideOrder:[{name:"localDoppler",slideDelay:""}]},
-      {type:"cities",loopComplete:true,repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayDesc",slideDelay:""},{name:"cityIntro",slideDelay:""},{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"city8Slides",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayDesc",slideDelay:""},{name:"extendedForecast",slideDelay:""},{name:"almanac",slideDelay:""}]},
-    ]
+  {type:"cities",repeat:0,locidx:0,slideDelay:10000,slideOrder:[{name:"cityIntro",slideDelay:""},{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"city8Slides",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:"return (Math.random() > 0.5) ? true : false",alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayDesc",slideDelay:""},{name:"extendedForecast",slideDelay:""},{name:"almanac",slideDelay:""}]},
+  {type:"traffic",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"trafficIntro",slideDelay:""},{name:"trafficOverview",slideDelay:""},{name:"trafficReport",slideDelay:"",testDisplay:'if (weatherInfo.trafficIncidents.enabled != true) {return true}'}]},
+  {type:"health",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"healthIntro",slideDelay:""},{name:"healthForecast",slideDelay:""},{name:"pollen",slideDelay:"",testDisplay:"if (!weatherInfo.healthPollen.totalcat || weatherInfo.healthforecast.noReport != false) {return true}"},{name:"achesBreath",slideDelay:""},{name:"airQuality",slideDelay:""},{name:"uvIndex",slideDelay:""},{name:"healthTip",slideDelay:""},{name:"moreInfoImage",slideDelay:""}]},
+  {type:"travel",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"travelIntro",slideDelay:""},{name:"travelWeather",slideDelay:""},{name:"regionalTravel",slideDelay:""},{name:"destinationForecast",slideDelay:""}]},
+  {type:"cities",repeat:0,locidx:0,slideDelay:10000,slideOrder:[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayPart",slideDelay:""},{name:"extendedForecast",slideDelay:""}]},
+  {type:"cities",repeat:true,locidx:'extra',slideDelay:10000,slideOrders:[[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayPart",slideDelay:""},{name:"extendedForecast",slideDelay:""}],[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayDesc",slideDelay:""}]]},
+  {type:"traffic",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"trafficIntro",slideDelay:""},{name:"trafficOverview",slideDelay:""},{name:"trafficReport",slideDelay:"",testDisplay:'if (weatherInfo.trafficIncidents.enabled != true) {return true}'}]},
+  {type:"golf",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"golfIntro",slideDelay:""},{name:"teeTime",slideDelay:""},{name:"courseForecast",slideDelay:""},{name:"golfPromo",slideDelay:""}]},
+  {type:"garden",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"gardenIntro",slideDelay:""},{name:"gardenForecast",slideDelay:""},{name:"moreGardenImage",slideDelay:""}]},
+  {type:"airport",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"airportIntro",slideDelay:""},{name:"airportConditions",slideDelay:""},{name:"otherAirportConds",slideDelay:""}]},
+  {type:"radar",repeat:true,locidx:0,slideDelay:60000,slideOrder:[{name:"localDoppler",slideDelay:""}]},
+	{type:"international",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"internationalIntro",slideDelay:""},{name:"internationalForecast",slideDelay:""}]},
+  {type:"cities",repeat:true,locidx:'extra reverse',slideDelay:10000,slideOrders:[[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayPart",slideDelay:""},{name:"extendedForecast",slideDelay:""}],[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayDesc",slideDelay:""}]]},
+  {type:"cities",loopComplete:true,repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayDesc",slideDelay:""},{name:"cityIntro",slideDelay:""},{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}'},{name:"currentConditions",slideDelay:""},{name:"city8Slides",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"dayDesc",slideDelay:""},{name:"extendedForecast",slideDelay:""},{name:"almanac",slideDelay:""}]},
+        ]
+         
 }
 var severeLoopSettings = {radarTransition:true,order:[
-  {type:"severe-cities",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}',alternate:{name:"severeMessage",slideDelay:""}}/*,{name:"severeCurrentConditions",slideDelay:""},{name:"severeCity8Slides",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"severeDayDesc",slideDelay:""},{name:"severeExtendedForecast",slideDelay:""},{name:"severeAlmanac",slideDelay:""}*/]},
+  {type:"severe-cities",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"bulletin",slideDelay:"",testDisplay:'if (weatherInfo.bulletin.weatherLocs[replaceLocIdx].enabled != true) {return true}',alternate:{name:"severeMessage",slideDelay:""}},{name:"severeCurrentConditions",slideDelay:""},{name:"severeCity8Slides",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"severeDayDesc",slideDelay:""},{name:"severeExtendedForecast",slideDelay:""},{name:"severeAlmanac",slideDelay:""}]},
   {type:"severe-cities",repeat:true,locidx:0,slideDelay:10000,slideOrder:[{name:"severeCurrentConditions",slideDelay:""},{name:"localDoppler",slideDelay:"",testDisplay:'return (Math.random() > 0.5) ? true : false',alternate:{name:"regionalSatellite",slideDelay:""}},{name:"severeDayPart",slideDelay:""},{name:"severeExtendedForecast",slideDelay:""}]}
 ]}
 var audioSettings = {
   enableMusic: true, //Something is wrong if you set this to false.
-  order: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33], //The order the music will play. To include or exclude tracks add or remove their number to the order. Default is 1-33. 34-46 are known 2003 tracks excluding duplicates with 2007. 47-51 are known 2006 tracks excluding duplicates with 2007 and 2003. 52-53 are other weatherscan tracks from unknown year. 54-66 is Trammel Starks 1 not used in any other section. 67-76 is Trammel Starks 2 excluding duplicates. 77-83 is Trammel Starks 3 excluding duplicates.
+  order: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83], //The order the music will play. To include or exclude tracks add or remove their number to the order. Default is 1-33. 34-46 are known 2003 tracks excluding duplicates with 2007. 47-51 are known 2006 tracks excluding duplicates with 2007 and 2003. 52-53 are other weatherscan tracks from unknown year. 54-66 is Trammel Starks 1 not used in any other section. 67-76 is Trammel Starks 2 excluding duplicates. 77-83 is Trammel Starks 3 excluding duplicates.
   shuffle: false, //Shuffle audio. Default is false.
   randomStart: true, //Starts the order from a random spot. Default is true.
   enableNarrations: true, //Play narrations. Default is true.
@@ -92,7 +109,7 @@ var locationSettings = {
     searchQuery:{ //Type and val are required fields for search to work. Will be overridden if location is given in URL.
       type:"",//Leave type blank to use automatic search. "geocode", "state", "district", "city", "locality", "neighborhood", "postal" (zipcode), "address", "poi", "pws" (personal weatherstation) //If geocode is used all otherfields but val will be ignored.
       fuzzy:true, //Attempt approximate search.
-      country:"MX", //Two letter country code. //Recommend using "US".
+      country:"US", //Two letter country code. //Recommend using "US".
       state:"", //Two letter state code.
       val:"", //for geocode "lat,lon"
       searchResultNum:2,//Defaults to 0. Use if the first result for a particular location sucks.
@@ -490,6 +507,8 @@ var weatherInfoSettings = {
     weatherLocs:[],
     severewarnings:[],
     //{name:"", desc:"", status:""}
+
+	//{name:"", desc:"", status:""}
     marqueewarnings:[],
     severeweathermode: false
     //{name:"", desc:"", status:"", significance:""}
@@ -506,8 +525,8 @@ var weatherInfoSettings = {
     {day:"",time:"",index:"",desc:""},
     {day:"",time:"",index:"",desc:""}
   ]}, airport: {noReport: false, mainairports:[
-    {displayname:"",iata:"MIA",arrivals:{delay:"No Delay",reason:""},departures:{delay:"No Delay",reason:""},temp:"",cond:"",icon:"",windspeed:""},
-    {displayname:"",iata:"MCO",arrivals:{delay:"No Delay",reason:""},departures:{delay:"No Delay",reason:""},temp:"",cond:"",icon:"",windspeed:""}
+    {displayname:"",iata:"LAX",arrivals:{delay:"No Delay",reason:""},departures:{delay:"No Delay",reason:""},temp:"",cond:"",icon:"",windspeed:""},
+    {displayname:"",iata:"JFK",arrivals:{delay:"No Delay",reason:""},departures:{delay:"No Delay",reason:""},temp:"",cond:"",icon:"",windspeed:""}
   ], delays: [],
     //{iato:"",type:"",amount:"",amountmin:"",reason:""}
    otherairports:[
@@ -532,5 +551,5 @@ var weatherInfoSettings = {
   radarTempUnavialable: false,
   radarWinterLegend: false,
   reboot: false,
-  ad: "You are watching an emulation of the Weatherscan IntelliStar system. Weatherscan is a digital cable and satellite television network that is owned by a consortium owned in turn by NBCUniversal and investment firms The Blackstone Group and Bain Capital. A spinoff of The Weather Channel, Weatherscan features uninterrupted local weather information in graphical format on a continuous loop that is generated by an IntelliStar unit installed at the cable provider's headend; unlike The Weather Channel, Weatherscan does not feature on-air talent of any kind."
+  ad: "With Comcast Spotlight, utilize the impact of interactive advertising. Specifically target areas of New Jersey on TV with commercials on networks like ESPN and TNT - and on the internet at XFINITY.com and FoxNews.com. For your custom advertising solution, call 244-2122."
 }

@@ -22,7 +22,6 @@ function WeatherAudio() {
 		if (audioSettings.shuffle == true) {
 			shuffle(musicarr);
 		};
-		console.log(musicarr);
 
 		startPlaying(musicarr, true);
 
@@ -48,7 +47,7 @@ function WeatherAudio() {
 					arr.push(musicpath + "Trammel Starks 3 Track " + String(audioSettings.order[i]-77) + '.mp3');
 				}
 			}
-
+			 
 		}
 
 	})();
@@ -224,7 +223,9 @@ function WeatherAudio() {
 			startPlaying(['/localvocals/narrations/'+audioSettings.narrationType+'/Local_airport_delays.mp3'], false);
 		}
 	}
-
+	this.playTrafficConditions = function () {
+		startPlaying(['/localvocals/narrations/'+audioSettings.narrationType+'/Traffic_conditions.mp3'], false);
+	}
 	this.playwarningbeep = function () {
 		startPlaying(['/localvocals/narrations/warningbeep.wav'], false);
 	}

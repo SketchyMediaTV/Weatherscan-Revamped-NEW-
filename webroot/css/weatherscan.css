@@ -18,7 +18,7 @@
   font-family: 'Interstate BoldCn';
   src: url(/fonts/newfonts/Interstate-BoldCondensed.woff) format("woff");
   font-weight: 700;
-  font-style: normal;
+  font-style: bold;
   font-stretch: condensed;
 }
 @font-face {
@@ -58,13 +58,13 @@
 }
 @font-face {
   font-family: Frutiger;
-  src: url(/fonts/newfonts/frutiger.woff) format("woff");
+  src: url(/fonts/newfonts/Frutiger.woff) format("woff");
   font-weight: 400;
   font-style: normal
 }
 @font-face {
   font-family: Frutiger;
-  src: url(/fonts/newfonts/Frutiger_bold.woff) format("woff");
+  src: url(/fonts/newfonts/Frutiger_Bold.woff) format("woff");
   font-weight: bold;
   font-style: normal
 }
@@ -74,7 +74,7 @@
   font-style: italic;
 }
 @font-face {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   src: url(/fonts/newfonts/Frutiger-57Cn.woff) format("woff");
   font-style: normal;
 }
@@ -102,12 +102,12 @@
   transform-origin: left;
   position: absolute;
   white-space: nowrap;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   padding: 22.9%;
   padding-left: 20.4%;
   color: #fff;
   font-size: 48px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   z-index: 2000
 }
 .info-slide .tempunavailable {
@@ -115,12 +115,12 @@
   transform-origin: left;
   position: absolute;
   white-space: nowrap;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   padding-top: 23.5%;
   padding-left: 15%;
   color: #fff;
   font-size: 49px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   z-index: 2000
 }
 .radar-slide .tempunavailable {
@@ -131,12 +131,12 @@
   transform-origin: left;
   position: absolute;
   white-space: nowrap;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   padding-top: 23.5%;
   padding-left: 29.65%;
   color: #fff;
   font-size: 48px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   z-index: 2000
 }
 .info-slide-content.severe-weatherstatement .frost-pane {
@@ -149,10 +149,10 @@
   transform: translate(0,0px);
 }
 .info-slide-content.severe-weatherstatement .frost-pane .statement {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 43px;
   color: #fff;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   line-height: 170%;
   text-align: center;
   width: 95%;
@@ -174,16 +174,16 @@
 }
 
 .severe-frost-pane .labels {
-  font-family: 'Frutiger 57 Condensed';
-  color: #d8c422;
+  font-family: 'Frutiger Bold Cn';
+  color: #ffd40e;
   left: 13.5%;
-  transform: scale(115.5%,100%);
+  transform: scale(100%,100%);
   transform-origin: left;
   font-size: 37.5px;
 }
 
 .severe-city-info .frost-pane .data {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   transform: scale(113.5%,100%);
   transform-origin: right;
   right: 10%;
@@ -342,7 +342,7 @@
 }
 .info-slide-content.severe-daypart .condition {
   color: #fff;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 27px;
   text-shadow: #000 2px 2px 2px;
   height: 30px;
@@ -382,7 +382,7 @@
   height: 446.25px;
 }
 .severe-forecast .frost-pane .title {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 41.5px;
   transform: scale(117%,100%);
   transform-origin: left;
@@ -394,7 +394,7 @@
 }
 
 .info-slide-content.severe-forecast .content {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   height: 400px;
   max-height: 400px;
   transform: translate(-2.5px,-2.5px) scale(115%,100%);
@@ -455,7 +455,7 @@
   color: #fff;
   font-family: Frutiger;
   font-size: 30px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   height: 35px;
   width: 100%;
   position: absolute;
@@ -475,9 +475,9 @@
 }
 .info-slide-content.severe-extended-forecast .thingg .thingday {
   color: #fff;
-  font-family: 'Frutiger 57 condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 30px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   height: 35px;
   min-width: 165px;
   margin-left: 6.5px;
@@ -564,7 +564,7 @@
 }
 .info-slide-content.severe-extended-forecast .lfrost-pane .templow {
   color: #fff;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 58.5px;
   text-shadow: #000 2px 2px 2px;
   height: 113px;
@@ -573,12 +573,12 @@
   padding: 20px;
   padding-top: 7px;
   text-align: center;
-  transform: translate(-2px, 12.5px) scale(115.5%,100%);
+  transform: translate(-2px, 12.5px) scale(100%,100%);
   overflow-wrap: break-word;
 }
 .info-slide-content.severe-extended-forecast .frost-pane .conditions {
   color: #fff;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 27px;
   text-shadow: #000 2px 2px 2px;
   height: 113px;
@@ -586,7 +586,7 @@
   width: 100%;
   padding: 10px;
   text-align: center;
-  transform: translate(-2px, 12.5px) scale(115.5%,100%);
+  transform: translate(-2px, 12.5px) scale(100%,100%);
   overflow-wrap: break-word;
 }
 .info-slide-content.severe-extended-forecast .lfrost-pane .conditions {
@@ -633,7 +633,7 @@
 
 .info-slide-content.severe-almanac .frost-pane.half .averagetitle {
   font-family: Frutiger;
-  color: #d8c422;
+  color: #ffd40e;
   font-size: 35px;
   padding-left: 50px;
   padding-top: 25px;
@@ -685,7 +685,7 @@
 .info-slide-content.severe-almanac .frost-pane.half .recordtitle {
   font-family: Frutiger;
   position: absolute;
-  color: #d8c422;
+  color: #ffd40e;
   font-size: 35px;
   left: 398px;
   top: 25px;
@@ -770,7 +770,7 @@
   color: #fff;
   font-family: Frutiger;
   font-size: 33px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   transform: scale(104%,100%);
   transform-origin: left;
 }
@@ -795,7 +795,7 @@
 
 .info-slide-content.severe-almanac .frost-pane.purple .sunrisetitle {
   font-family: Frutiger;
-  color: #d8c422;
+  color: #ffd40e;
   position: absolute;
   font-size: 36px;
   left: 20px;
@@ -816,7 +816,7 @@
 
 .info-slide-content.severe-almanac .frost-pane.purple .sunsettitle {
   font-family: Frutiger;
-  color: #d8c422;
+  color: #ffd40e;
   position: absolute;
   font-size: 36px;
   left: 20px;
@@ -857,7 +857,7 @@
 }
 .info-slide-content.severe-almanac .frost-pane.purple .phase .phasetext {
   font-family: Frutiger;
-  color: #d8c422;
+  color: #ffd40e;
   font-size: 23px;
   padding-top: 20.5px;
   align-self: center;
@@ -929,7 +929,7 @@ background-image: url(/images/moonphases/new.png);
   background-position: -72px -661px;
 }
 .info-slide-content.severe-aroundcityinfo .frost-pane.city .cityname {
-  font-family: 'Frutiger 57 condensed';
+  font-family: 'Frutiger Bold Cn';
   color: #fff;
   position: absolute;
   font-size: 33.5px;
@@ -946,7 +946,7 @@ background-image: url(/images/moonphases/new.png);
   left: 38px;
 }
 .info-slide-content.severe-aroundcityinfo .frost-pane.city .temp {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   color: #fff;
   position: absolute;
   font-size: 51px;
@@ -967,7 +967,7 @@ background-image: url(/images/moonphases/new.png);
   position: absolute;
 }
 .info-slide-content.severe-aroundcityinfo .frost-pane.city .wind {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   color: #fff;
   position: absolute;
   font-size: 36.25px;
@@ -985,11 +985,23 @@ background-image: url(/images/moonphases/new.png);
   font-size: 110%
 }
 
+.traffictext {
+  position: relative;
+  font-weight: bold;
+  right: -4%;
+  z-index: 10;
+}
+
+#traffictext {
+  height: 50px;
+  width: 800px;
+  margin-top: -10px;
+}
 .frost-pane {
   color: #fff;
   font-family: Frutiger;
   font-size: 36px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2px 2px 1px;
   max-height: 446.25px;
   background: url(/images/newbg/frostpane.svg);
   background-repeat: no-repeat;
@@ -1013,23 +1025,22 @@ background-image: url(/images/moonphases/new.png);
 .city-info .frost-pane.left * {
   position: absolute;
   padding-top: 5px;
-  line-height: 182.5%;
+  line-height: 170%;
 }
 .frost-pane .labels {
-  font-family: 'Frutiger 57 Condensed';
-  color: #d8c422;
+  font-family: 'Frutiger Bold Cn';
+  color: #ffd40e;
   left: 13.5%;
-  transform: scale(115.5%,100%);
+  transform: scale(100%, 100%);
   transform-origin: left;
-  font-size: 37.5px;
+  font-size: 40px;
 }
 
 .city-info .frost-pane .data {
-  font-family: 'Frutiger 57 Condensed';
-  transform: scale(113.5%,100%);
+  font-family: 'Frutiger Bold Cn';
   transform-origin: right;
   right: 10%;
-  font-size: 37.5px;
+  font-size: 40px;
   text-align: right;
 }
 
@@ -1052,42 +1063,42 @@ background-image: url(/images/moonphases/new.png);
 }
 
 .city-info .frost-pane .conditions {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  font-size: 36px;
-  font-weight: 500;
-  line-height: 110%;
-  top: 220px;
-  text-align: center;
-  text-transform: capitalize;
-  overflow-wrap: break-word;
-  width: 25%;
-  height: 50px;
-  transform: translate(-11px,0px) scale(104.5%,100%);
-  transform-origin: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 37px;
+    line-height: 110%;
+    top: 222px;
+    text-align: center;
+    text-transform: capitalize;
+    overflow-wrap: break-word;
+    width: 25%;
+    height: 50px;
+    transform: translate(-11px, 0px) scale(100%, 100%);
+    transform-origin: left;
+    font-weight: bold;
 }
 .city-info .frost-pane .temp {
-  font-family: 'Frutiger Bold Cn';
-  font-size: 69px;
-  font-weight: 700;
-  position: absolute;
-  top: 323px;
-  letter-spacing: 2.5px;
-  transform: translate(-6px,0px) scale(102.5%,100%);;
-  transform-origin: left;
+    font-family: 'Frutiger BQ';
+    font-size: 69px;
+    /* font-weight: 700; */
+    position: absolute;
+    top: 323px;
+    letter-spacing: 2.5px;
+    transform: translate(-3px, 3px);
+    transform-origin: left;
 }
 
 .frost-pane .title {
-  color: #d8c422;
+  color: #ffd40e;
   font-size: 42px;
   text-transform: capitalize;
 }
 
 .frost-pane .content {
   font-size: 50px;
-  line-height: 125%
+  line-height: 110%
 }
 .info-slide-content.daypart {
   flex-direction: row
@@ -1195,7 +1206,7 @@ background-image: url(/images/moonphases/new.png);
 }
 .info-slide-content.daypart .condition {
   color: #fff;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 27px;
   text-shadow: #000 2px 2px 2px;
   height: 30px;
@@ -1236,23 +1247,23 @@ background-image: url(/images/moonphases/new.png);
   background-position: -72px -329px;
 }
 .forecast .frost-pane .title {
-  font-family: 'Frutiger 57 Condensed';
-  font-size: 41.5px;
-  transform: scale(117%,100%);
-  transform-origin: left;
-  letter-spacing: .5px;
+	font-family: 'Frutiger Bold Cn';
+    font-size: 41.5px;
+    transform: translate(2px, 11px);
+    transform-origin: left;
+    letter-spacing: 0.7px;
 }
 .info-slide-content.forecast .frost-pane {
   max-height: 446.25px;
 }
 
 .info-slide-content.forecast .content {
-  font-family: 'Frutiger 57 Condensed';
-  height: 400px;
-  max-height: 400px;
-  transform: translate(-2.5px,-2.5px) scale(115%,100%);
-  transform-origin: left;
-  letter-spacing: 1.5px;
+    font-family: 'Frutiger Bold Cn';
+    height: 400px;
+    max-height: 400px;
+    transform: translate(0.5px, 10px);
+    transform-origin: left;
+    letter-spacing: 1.5px;
 }
 .info-slide-content.extended-forecast {
   width: 100%;
@@ -1308,7 +1319,7 @@ background-image: url(/images/moonphases/new.png);
   color: #fff;
   font-family: Frutiger;
   font-size: 30px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   height: 35px;
   width: 100%;
   position: absolute;
@@ -1327,18 +1338,18 @@ background-image: url(/images/moonphases/new.png);
   -webkit-mask-size: 1065px 1164px;
 }
 .info-slide-content.extended-forecast .thingg .thingday {
-  color: #fff;
-  font-family: 'Frutiger 57 condensed';
-  font-size: 30px;
-  text-shadow: #000 2px 2px 4px;
-  height: 35px;
-  min-width: 165px;
-  margin-left: 6.5px;
-  padding-top: 3.5px;
-  z-index: 388690;
-  text-align: center;
-  justify-content: center;
-  transform: scale(115%,100%);
+	color: #fff;
+    font-family: 'Frutiger Bold Cn';
+    font-size: 30px;
+    text-shadow: #141414 2.33807px 3.00663px 1.33711px;
+    height: 35px;
+    min-width: 165px;
+    margin-left: 5.5px;
+    /* padding-top: 0.5px; */
+    z-index: 388690;
+    text-align: center;
+    justify-content: center;
+    transform: translate(-2px, -1px);
 }
 .info-slide-content.extended-forecast .thingg .thingday.iw {
   margin-left: 0px;
@@ -1351,19 +1362,18 @@ background-image: url(/images/moonphases/new.png);
   margin-left: 7.5px;
 }
 .info-slide-content.extended-forecast .frost-pane .temphigh {
-  color: #fff;
-  font-family: Frutiger;
-  font-weight: 400;
-  font-size: 58.5px;
-  text-shadow: #000 2px 2px 2px;
-  height: 70px;
-  width: 100%;
-  background: #5a8aec;
-  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translate(0px, 13.5px);
+	color: #fff;
+    font-family: 'Frutiger Bold Cn';
+    font-size: 59px;
+    text-shadow: #000 2px 2px 1px;
+    height: 70px;
+    width: 100%;
+    /* background: #5a8aec; */
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0px, 13.5px) scale(100%, 100%);
 }
 .info-slide-content.extended-forecast .frost-pane .temphigh  span{
   display: block;
@@ -1390,62 +1400,62 @@ background-image: url(/images/moonphases/new.png);
   transform: translate(0px, 13.5px);
 }
 .info-slide-content.extended-forecast .lfrost-pane .temphigh .temphightext {
-  color: #fff;
-  font-family: Frutiger;
-  font-size: 58.5px;
-  text-shadow: #000 2px 2px 2px;
-  height: 100%;
-  width: 83.55%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: scale(104.5%,100%);
+	color: #fff;
+    font-family: 'Frutiger Bold Cn';
+    font-size: 59px;
+    text-shadow: #000 2px 2px 2px;
+    height: 100%;
+    width: 83.55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(100%, 100%);
 }
 
 .info-slide-content.extended-forecast .frost-pane .templow {
-
-  color: #fff;
-  font-family: Frutiger;
-  font-size: 58.5px;
-  text-shadow: #000 2px 2px 2px;
-  height: 75px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transform: translate(0px, 23.5px) scale(104.5%,100%);
+	color: #fff;
+    font-family: 'Frutiger Bold Cn';
+    font-size: 59px;
+    text-shadow: #000 2px 2px 1px;
+    height: 74px;
+    width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translate(0px, 23.5px) scale(100%, 100%);
+    margin-left: 1px;
 }
 .info-slide-content.extended-forecast .lfrost-pane .templow {
-  color: #fff;
-  font-family: Frutiger;
-  font-size: 58.5px;
-  text-shadow: #000 2px 2px 2px;
-  height: 75px;
-  width: 83.55%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transform: translate(0px, 23.5px);
+	color: #fff;
+    font-family: 'Frutiger Bold Cn';
+    font-size: 59px;
+    text-shadow: #000 2px 2px 2px;
+    height: 74px;
+    width: 83.55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translate(0px, 23.5px) scale(100%, 100%);
 }
 .info-slide-content.extended-forecast .frost-pane .conditions {
   color: #fff;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 27px;
-  text-shadow: #000 2px 2px 2px;
+  text-shadow: #000 2px 2px 1px;
   height: 113px;
   line-height: 132.5%;
   width: 100%;
   padding: 20px;
   padding-top: 7px;
   text-align: center;
-  transform: translate(-2px, 12.5px) scale(115.5%,100%);
+  transform: translate(-2px, 12.5px) scale(100%,100%);
   overflow-wrap: break-word;
 }
 .info-slide-content.extended-forecast .lfrost-pane .conditions {
   color: #fff;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 27px;
   line-height: 132.5%;
   text-shadow: #000 2px 2px 2px;
@@ -1454,7 +1464,7 @@ background-image: url(/images/moonphases/new.png);
   padding: 20px;
   padding-top: 7px;
   text-align: center;
-  transform: translate(-2px, 12.5px) scale(115.5%,100%);
+  transform: translate(-2px, 12.5px) scale(100%,100%);
   overflow-wrap: break-word;
 }
 .info-slide-content.extended-forecast .linebreak {
@@ -1486,33 +1496,36 @@ background-image: url(/images/moonphases/new.png);
 }
 
 .info-slide-content.almanac .frost-pane.half .averagetitle {
-  font-family: Frutiger;
-  color: #d8c422;
-  font-size: 35px;
-  padding-left: 50px;
-  padding-top: 25px;
-  transform: scale(108%,100%);
-  transform-origin: left;
+    font-family: Frutiger;
+    color: #ffd40e;
+    font-size: 37px;
+    padding-left: 52px;
+    padding-top: 24px;
+    transform: scale(100%, 100%);
+    transform-origin: left;
+    font-weight: bold;
 }
 
 .info-slide-content.almanac .frost-pane.half .ahigh {
-  position: absolute;
-  font-family: Frutiger;
-  color: #fff;
-  font-size: 31px;
-  left: 132.5px;
-  top: 87.5px;
-  transform: scale(108%,100%);
-  transform-origin: left;
+	position: absolute;
+    font-family: Frutiger;
+    color: #fff;
+    font-size: 31px;
+    left: 132.5px;
+    top: 87.5px;
+    /* transform: scale(108%, 100%); */
+    transform-origin: left;
+    font-weight: bold;
 }
 .info-slide-content.almanac .frost-pane.half .ahightext {
-  position: absolute;
-  font-family: Frutiger;
-  color: #fff;
-  font-size: 54px;
-  left: 266px;
-  top: 74px;
-  transform: scale(102.5%,100%);
+    position: absolute;
+    font-family: Frutiger;
+    color: #fff;
+    font-size: 54px;
+    left: 266px;
+    top: 75px;
+    transform-origin: left;
+    font-weight: bold;
 }
 
 .info-slide-content.almanac .frost-pane.half .alow {
@@ -1522,29 +1535,30 @@ background-image: url(/images/moonphases/new.png);
   font-size: 31px;
   left: 132.5px;
   top: 148.5px;
-  transform: scale(108%,100%);
+  font-weight: bold;
   transform-origin: left;
 }
 
 .info-slide-content.almanac .frost-pane.half .alowtext {
-  position: absolute;
-  font-family: Frutiger;
-  color: #fff;
-  font-size: 54px;
-  left: 266px;
-  top: 137.5px;
-  transform: scale(102.5%,100%);
+	position: absolute;
+    font-family: 'Frutiger';
+    color: #fff;
+    font-size: 54px;
+    left: 266px;
+    top: 138.5px;
+    font-weight: bold;
 }
 
 .info-slide-content.almanac .frost-pane.half .recordtitle {
-  font-family: Frutiger;
-  position: absolute;
-  color: #d8c422;
-  font-size: 35px;
-  left: 398px;
-  top: 25px;
-  transform: scale(108%,100%);
-  transform-origin: left;
+    font-family: Frutiger;
+    position: absolute;
+    color: #ffd40e;
+    font-size: 37px;
+    left: 398px;
+    top: 25px;
+    /* transform: scale(108%, 100%); */
+    transform-origin: left;
+    font-weight: bold;
 }
 
 .info-slide-content.almanac .frost-pane.half .rhigh {
@@ -1554,18 +1568,18 @@ background-image: url(/images/moonphases/new.png);
   font-size: 31px;
   left: 457.5px;
   top: 87.5px;
-  transform: scale(106%,100%);
+  font-weight: bold;
   transform-origin: left;
 }
 .info-slide-content.almanac .frost-pane.half .rhightext {
-  position: absolute;
-  font-family: Frutiger;
-  color: #fff;
-  font-size: 54px;
-  left: 567.5px;
-  top: 74px;
-  transform: scale(102.5%,100%);
-  transform-origin: left;
+	position: absolute;
+    font-family: Frutiger;
+    color: #fff;
+    font-size: 54px;
+    left: 567.5px;
+    top: 75px;
+    transform-origin: left;
+    font-weight: bold;
 }
 
 .info-slide-content.almanac .frost-pane.half .rhighyear {
@@ -1575,6 +1589,7 @@ background-image: url(/images/moonphases/new.png);
   font-size: 36px;
   left: 663px;
   top: 84px;
+  font-weight: bold;
 }
 
 .info-slide-content.almanac .frost-pane.half .rlow {
@@ -1584,19 +1599,19 @@ background-image: url(/images/moonphases/new.png);
   font-size: 31px;
   left: 457.5px;
   top: 148.5px;
-  transform: scale(108%,100%);
+  font-weight: bold;
   transform-origin: left;
 }
 
 .info-slide-content.almanac .frost-pane.half .rlowtext {
-  position: absolute;
-  font-family: Frutiger;
-  color: #fff;
-  font-size: 54px;
-  left: 567.5px;
-  top: 147.5px;
-  transform: scale(102.5%,100%);
-  transform-origin: left;
+	position: absolute;
+    font-family: Frutiger;
+    color: #fff;
+    font-size: 54px;
+    left: 567.5px;
+    top: 138.5px;
+    transform-origin: left;
+    font-weight: bold;
 }
 
 .info-slide-content.almanac .frost-pane.half .rlowyear {
@@ -1606,6 +1621,7 @@ background-image: url(/images/moonphases/new.png);
   font-size: 36px;
   left: 663px;
   top: 147.5px;
+  font-weight: bold;
 }
 
 
@@ -1620,14 +1636,15 @@ background-image: url(/images/moonphases/new.png);
 
 }
 .info-slide-content.almanac .thing .thingtext {
-  width: 100%;
-  padding-left: 2.5px;
-  color: #fff;
-  font-family: Frutiger;
-  font-size: 33px;
-  text-shadow: #000 2px 2px 4px;
-  transform: scale(104%,100%);
-  transform-origin: left;
+	width: 100%;
+    padding-left: 2.5px;
+    color: #fff;
+    font-family: Frutiger;
+    font-size: 33px;
+    /* text-shadow: #141414 2.33807px 3.00663px 1.33711px; */
+    transform: scale(104%, 100%);
+    transform-origin: left;
+    font-weight: bold;
 }
 .info-slide-content.almanac .thing .thingbg {
   position: absolute;
@@ -1650,45 +1667,49 @@ background-image: url(/images/moonphases/new.png);
 }
 
 .info-slide-content.almanac .frost-pane.purple .sunrisetitle {
-  font-family: Frutiger;
-  color: #d8c422;
-  position: absolute;
-  font-size: 36px;
-  left: 20px;
-  top: 55.5px;
-  transform: scale(106.5%,100%);
-  transform-origin: left;
+	font-family: Frutiger;
+    color: #ffd40e;
+    position: absolute;
+    font-size: 37px;
+    left: 19px;
+    top: 57px;
+    transform: scale(100%, 100%);
+    transform-origin: left;
+    font-weight: bold;
 }
 .info-slide-content.almanac .frost-pane.purple .sunrisetext {
-  font-family: Frutiger;
-  color: #fff;
-  position: absolute;
-  font-size: 38px;
-  left: 167px;
-  top: 54px;
-  transform: scale(105.5%,100%);
-  transform-origin: left;
+	font-family: Frutiger;
+    color: #fff;
+    position: absolute;
+    font-size: 40px;
+    left: 167px;
+    top: 54px;
+    /* transform: scale(105.5%, 100%); */
+    transform-origin: left;
+    font-weight: bold;
 }
 
 .info-slide-content.almanac .frost-pane.purple .sunsettitle {
-  font-family: Frutiger;
-  color: #d8c422;
-  position: absolute;
-  font-size: 36px;
-  left: 20px;
-  top: 125.5px;
-  transform: scale(106.5%,100%);
-  transform-origin: left;
+	font-family: Frutiger;
+    color: #ffd40e;
+    position: absolute;
+    font-size: 37px;
+    left: 19px;
+    top: 127px;
+    /* transform: scale(106.5%, 100%); */
+    transform-origin: left;
+    font-weight: bold;
 }
 .info-slide-content.almanac .frost-pane.purple .sunsettext {
-  font-family: Frutiger;
-  color: #fff;
-  position: absolute;
-  font-size: 38px;
-  left: 167px;
-  top: 124px;
-  transform: scale(105.5%,100%);
-  transform-origin: left;
+    font-family: Frutiger;
+    color: #fff;
+    position: absolute;
+    font-size: 40px;
+    left: 167px;
+    top: 124px;
+    /* transform: scale(105.5%, 100%); */
+    transform-origin: left;
+    font-weight: bold;
 }
 .info-slide-content.almanac .frost-pane.purple .phase {
   display: flex;
@@ -1712,12 +1733,13 @@ background-image: url(/images/moonphases/new.png);
   right: 421px;
 }
 .info-slide-content.almanac .frost-pane.purple .phase .phasetext {
-  font-family: Frutiger;
-  color: #d8c422;
-  font-size: 23px;
-  padding-top: 20.5px;
-  align-self: center;
-  transform: translate(-4.5px, 0px) scale(108%,100%);
+	font-family: Frutiger;
+    color: #ffd40e;
+    font-size: 26px;
+    padding-top: 20.5px;
+    align-self: center;
+    transform: translate(-2.5px, 0px) scale(100%, 100%);
+    font-weight: bold;
 }
 .info-slide-content.almanac .frost-pane.purple .phase .icon {
   background-repeat: no-repeat;
@@ -1749,14 +1771,15 @@ background-image: url(/images/moonphases/NEW.png);
 }
 
 .info-slide-content.almanac .frost-pane.purple .phase .date {
-  font-family: Frutiger;
-  color: #fff;
-  font-size: 26px;
-  padding-top: 0px;
-  align-self: center;
-  position: absolute;
-  bottom: 12.5px;
-  transform: scale(106%,100%) translate(-2.5px,0px);
+	font-family: Frutiger;
+    color: #fff;
+    font-size: 27px;
+    padding-top: 0px;
+    align-self: center;
+    position: absolute;
+    bottom: 11.5px;
+    transform: scale(100%, 100%) translate(-2.5px, 0px);
+    font-weight: bold;
 }
 .info-slide-content.aroundcityinfo {
   display: flex;
@@ -1785,15 +1808,15 @@ background-image: url(/images/moonphases/NEW.png);
   background-position: -72px -661px;
 }
 .info-slide-content.aroundcityinfo .frost-pane.city .cityname {
-  font-family: 'Frutiger 57 condensed';
-  color: #fff;
-  position: absolute;
-  font-size: 33.5px;
-  left: 10px;
-  top: 50%;
-  width: 40%;
-  transform: translate(0,-23.5%) scale(115%,100%);
-  transform-origin: left;
+	font-family: 'Frutiger Bold Cn';
+    color: #fff;
+    position: absolute;
+    font-size: 35px;
+    left: 7px;
+    top: 37%;
+    width: 40%;
+    transform: translateX(4px);
+    transform-origin: left;
 }
 .info-slide-content.aroundcityinfo .frost-pane.city.i .cityname {
   left: 55px;
@@ -1802,15 +1825,15 @@ background-image: url(/images/moonphases/NEW.png);
   left: 38px;
 }
 .info-slide-content.aroundcityinfo .frost-pane.city .temp {
-  font-family: 'Frutiger 57 Condensed';
-  color: #fff;
-  position: absolute;
-  font-size: 51px;
-  left: 395px;
-  top: 50%;
-  width: 10%;
-  text-align: center;
-  transform: translate(0,-41%) scale(112%,100%);
+	font-family: 'Frutiger Bold Cn';
+    color: #fff;
+    position: absolute;
+    font-size: 53px;
+    left: 402px;
+    top: 45%;
+    width: 9%;
+    text-align: center;
+    transform: translate(0, -40%);
 }
 .info-slide-content.aroundcityinfo .frost-pane.city .icon {
   background-repeat: no-repeat;
@@ -1824,14 +1847,14 @@ background-image: url(/images/moonphases/NEW.png);
   position: absolute;
 }
 .info-slide-content.aroundcityinfo .frost-pane.city .wind {
-  font-family: 'Frutiger 57 Condensed';
-  color: #fff;
-  position: absolute;
-  font-size: 36.25px;
-  right: 92.5px;
-  top: 50%;
-  transform: translate(0,-23.5%) scale(115%,100%);
-  transform-origin: right;
+    font-family: 'Frutiger Bold Cn';
+    color: #fff;
+    position: absolute;
+    font-size: 38px;
+    right: 91.5px;
+    top: 45%;
+    transform: translate(-1px, -11px) scale(100%, 100%);
+    transform-origin: right;
 }
 
 .info-slide-content.airportpanel .leftpanel {
@@ -1857,7 +1880,7 @@ background-image: url(/images/moonphases/NEW.png);
   font-family: Frutiger;
   font-size: 30px;
   transform-origin: left;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   transform: scale(105.5%,100%);
   transform-origin: left;
 }
@@ -1893,7 +1916,7 @@ background-image: url(/images/moonphases/NEW.png);
   color: #fff;
   font-family: Frutiger;
   font-size: 27px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   position: absolute;
   top: 97.5px;
   left: 67.5px;
@@ -1911,7 +1934,7 @@ background-image: url(/images/moonphases/NEW.png);
   color: #fff;
   font-family: Frutiger;
   font-size: 33px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   position: absolute;
   top: 93.5px;
   left: 252.5px;
@@ -1922,7 +1945,7 @@ background-image: url(/images/moonphases/NEW.png);
   color: #fff;
   font-family: Frutiger;
   font-size: 27px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   position: absolute;
   top: 159px;
   left: 67.5px;
@@ -1953,7 +1976,7 @@ background-image: url(/images/moonphases/NEW.png);
   color: #fff;
   font-family: Frutiger;
   font-size: 27px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   position: absolute;
   top: 87.5px;
   left: 67.5px;
@@ -1964,7 +1987,7 @@ background-image: url(/images/moonphases/NEW.png);
   color: #fff;
   font-family: Frutiger;
   font-size: 33px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   position: absolute;
   top: 85px;
   left: 252.5px;
@@ -1975,7 +1998,7 @@ background-image: url(/images/moonphases/NEW.png);
   color: #fff;
   font-family: Frutiger;
   font-size: 27px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   position: absolute;
   top: 140px;
   left: 67.5px;
@@ -1986,7 +2009,7 @@ background-image: url(/images/moonphases/NEW.png);
   color: #fff;
   font-family: Frutiger;
   font-size: 33px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   position: absolute;
   top: 142.5px;
   left: 252.5px;
@@ -1994,7 +2017,7 @@ background-image: url(/images/moonphases/NEW.png);
   transform-origin: left;
 }
 .info-slide-content.airportpanel .leftpanel .frost-pane.bottom .source {
-  color: #d8c422;
+  color: #ffd40e;
   font-family: Frutiger;
   font-size: 24px;
   transform: scale(104%, 100%);
@@ -2045,7 +2068,7 @@ background-image: url(/images/moonphases/NEW.png);
 }
 .info-slide-content.airportpanel .frost-pane.right .temp {
   color: #fff;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 80px;
   font-weight: 600;
   width: 100%;
@@ -2063,8 +2086,8 @@ background-image: url(/images/moonphases/NEW.png);
   font-family: Frutiger;
   font-weight: 600;
   font-size: 26px;
-  color: #d8c422;
-  text-shadow: #000 2px 2px 4px;
+  color: #ffd40e;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   line-height: 150%;
 }
 .info-slide-content.otherairports .thing .thingtext {
@@ -2074,10 +2097,10 @@ background-image: url(/images/moonphases/NEW.png);
   transform: scale(104%,100%);
   font-weight: 600;
   font-size: 26px;
-  color: #d8c422;
+  color: #ffd40e;
   line-height: 150%;
   padding-left: 305px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
 }
 .info-slide-content.otherairports .thing .thingbg {
   position: absolute;
@@ -2115,7 +2138,7 @@ background-image: url(/images/moonphases/NEW.png);
   margin-top: 8px;
 }
 .info-slide-content.otherairports .airport .airportname {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   transform: scale(112.5%,100%);
   transform-origin: left;
   color: #fff;
@@ -2130,7 +2153,7 @@ background-image: url(/images/moonphases/NEW.png);
   left: 28px;
 }
 .info-slide-content.otherairports .airport .temp {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   transform: scale(112.5%,100%);
   transform-origin: left;
   color: #fff;
@@ -2167,7 +2190,7 @@ background-image: url(/images/moonphases/NEW.png);
   font-size: 39px;
 }
 .info-slide-content.otherairports .source {
-  color: #d8c422;
+  color: #ffd40e;
   font-family: Frutiger;
   font-size: 24px;
   transform: scale(104%, 100%);
@@ -2177,7 +2200,7 @@ background-image: url(/images/moonphases/NEW.png);
   right: 67.5px;
 }
 .airport-slide #subhead-source {
-  color: #d8c422;
+  color: #ffd40e;
   font-family: Frutiger;
   font-size: 24px;
   transform: translateY(-16%) scale(106%, 100%);
@@ -2217,7 +2240,7 @@ background-image: url(/images/moonphases/NEW.png);
   color: #fff;
   font-family: Frutiger;
   font-size: 33px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   padding-top: 13.5px;
   padding-left: 67.5px;
   height: 40px;
@@ -2276,7 +2299,7 @@ background-image: url(/images/moonphases/NEW.png);
   top:0;
   font-family: Frutiger;
   font-size: 35.5px;
-  color: #ffffff;
+  color: #171717;
   text-shadow: #000 0px 0px 0px;
   word-spacing: 13.25px;
   text-align: center;
@@ -2370,7 +2393,7 @@ background-image: url(/images/moonphases/NEW.png);
   width: 100%;
   color: #fff;
   font-size: 23px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   padding-top: 9px;
   padding-left: 63px;
   transform: scale(107%,100%);
@@ -2386,9 +2409,9 @@ background-image: url(/images/moonphases/NEW.png);
   background-position: -72px -364px;
 }
 .info-slide-content.coastalwaters.warnings .frost-pane.content .warningtext {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 40px;
-  color: #d8c422;
+  color: #ffd40e;
   width: 100%;
   height: 100%;
   transform: scale(115%, 100%);
@@ -2397,14 +2420,14 @@ background-image: url(/images/moonphases/NEW.png);
   line-height: 114%;
 }
 .info-slide-content.coastalwaters.forecasts .frost-pane.content .title.day {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 40px;
   line-height: 114%;
   transform: scale(115%, 100%);
   transform-origin: left;
 }
 .info-slide-content.coastalwaters.forecasts .frost-pane.content .forecasttext {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 40px;
   line-height: 114%;
   transform: scale(115%, 100%);
@@ -2422,7 +2445,7 @@ background-image: url(/images/moonphases/NEW.png);
   height: 40px;
   font-family: Frutiger;
   font-size: 28.5px;
-  color: #d8c422;
+  color: #ffd40e;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .75));
   line-height: 150%;
   font-weight: 600;
@@ -2449,7 +2472,7 @@ background-image: url(/images/moonphases/NEW.png);
   margin-top: 14px;
   margin-left: 48px;
   font-size: 33px;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   transform: scale(114%, 100%);
   transform-origin: left;
 }
@@ -2459,7 +2482,7 @@ background-image: url(/images/moonphases/NEW.png);
   top: 45px;
   line-height: 127%;
   font-size: 32.7px;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   transform: scale(114%, 100%);
   transform-origin: left;
 }
@@ -2469,7 +2492,7 @@ background-image: url(/images/moonphases/NEW.png);
   top: 45px;
   line-height: 126%;
   font-size: 32.7px;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   transform: scale(114%, 100%);
   transform-origin: left;
 }
@@ -2508,7 +2531,7 @@ background-image: url(/images/moonphases/NEW.png);
   left: 200px;
   top: 62.5px;
   font-size: 32.7px;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   transform: scale(115%, 100%);
 }
 .info-slide-content.tides .frost-pane .sunsettext {
@@ -2516,7 +2539,7 @@ background-image: url(/images/moonphases/NEW.png);
   left: 617.5px;
   top: 62.5px;
   font-size: 32.7px;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   transform: scale(115%, 100%);
   transform-origin: left;
 }
@@ -2532,8 +2555,304 @@ background-image: url(/images/moonphases/NEW.png);
   transform: translate(0,0);
   background-position: -72px -660px;
 }
+.info-slide-content.traffic-overview {
+  flex-direction: column;
+  display: flex;
+}
+.info-slide-content.traffic-overview .thing .thingbg {
+  position: absolute;
+  right: 0;
+  top: 70;
+  margin-top: 10px;
+  background: #241e95;
+  height: 45px;
+  width: 100%;
+  -webkit-mask-image: url(/images/newbg/frostpane.svg);
+  -webkit-mask-position: -72px -329px;
+  -webkit-mask-size: 1065px 1164px;
+  z-index: 0;
+}
+.info-slide-content.traffic-overview .thing .thingtext {
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  font-family: Frutiger;
+  font-size: 28px;
+  padding-top: 30px;
+  text-shadow: 2px 2px 4px #000;
+  height: 35px;
+  padding-left: 67.5px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
+  transform-origin: left;
+  display: inline-block;
+}
+.info-slide-content.traffic-overview .thing .thingtext .box {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  margin-top: 4px;
+  margin-left: 5px;
+  filter: drop-shadow(2px 2px 2.4px #000);
+}
+.info-slide-content.traffic-overview .thing .thingtext .box.moderate {
+  position: absolute;
+}
+.info-slide-content.traffic-overview .thing .thingtext .text {
+  padding-left: 35px;
+  padding-top: 5px;
+}
+.info-slide-content.traffic-overview .frost-pane {
+  position: absolute;
+  margin-top: 45px;
+  height: 100%;
+  width: 100%;
+  -webkit-mask-image: url(/images/newbg/frostpane.svg);
+  -webkit-mask-position: -72px -374px;
+  -webkit-mask-size: 1065px 1164px;
+  background-position: -79px -364px;
+  display: flex;
+}
+#textclear.traffictext {
+  padding-top: 5px;
+  padding-left: 10px;
+}
+#moderate.box {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+#textmoderate.traffictext {
+  padding-top: 6px;
+  padding-left: 26px;
+}
+#heavy.box {
+  margin-left: 45px;
+  margin-top: 15px;
+}
+#textheavy.traffictext {
+  padding-top: 8px;
+  padding-left: 55px;
+}
+#unavailable.box {
+  margin-left: 60px;
+  margin-top: 15px;
+}
+#textunavailable.traffictext {
+  padding-top: 8px;
+  padding-left: 65px;
+}
+#trafmap {
+  position: absolute;
+  margin-top: 55px;
+  margin-left: 35px;
+  width: 820px;
+  min-width: 820px;
+  height: 395px;
+  min-height: 395px;
+  z-index: 388986;
+}
+#trafmapbox {
+  position: absolute;
+  margin-top: 55px;
+  margin-left: 35px;
+  width: 820px;
+  height: 395px;
+  z-index: 388986;
+}
+.info-slide-content.traffic-report {
+  flex-direction: column;
+  display: flex;
+}
+.info-slide-content.traffic-report .thing-top .thing {
+  color: #fff;
+  font-family: Frutiger;
+  font-size: 33px;
+  text-shadow: 2px 2px 4px #000;
+  height: 35px;
+  width: 100%;
+  position: absolute;
+  padding-left: 68px;
+}
+.info-slide-content.traffic-report .thing-top .thingbg {
+  position: absolute;
+  right: 0;
+  top: 70;
+  margin-top: 10px;
+  background: #241e95;
+  height: 45px;
+  width: 100%;
+  -webkit-mask-image: url(/images/newbg/frostpane.svg);
+  -webkit-mask-position: -72px -329px;
+  -webkit-mask-size: 1065px 1164px;
+  z-index: 0;
+}
+.info-slide-content.traffic-report .thing-top .thingtext {
+  position: absolute;
+  width: 92.5%;
+  color: #fff;
+  font-family: Frutiger;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 19px;
+  line-height: 35px;
+  text-shadow: 2px 2px 4px #000;
+  height: 50px;
+  padding-left: 77.5px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
+  overflow: hidden;
+  transform-origin: left;
+}
+.info-slide-content.traffic-report .frost-pane.top {
+  position: absolute;
+  width: 100%;
+  height: 165px;
+  margin-top: 45px;
+  -webkit-mask-image: url(/images/newbg/frostpane.svg);
+  -webkit-mask-position: -72px -374px;
+  -webkit-mask-size: 1065px 1164px;
+  background-position: -79px -364px;
+}
+.info-slide-content.traffic-report .impact-top {
+  position: absolute;
+  width: max-content;
+  color: #000;
+  background-color: #3DD135;
+  filter: drop-shadow(2.4px 2.4px 2.4px #000);
+  font-family: Frutiger;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 70px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  height: max-content;
+  margin-left: 47.5px;
+  transform-origin: left;
+  z-index: 388690;
+}
+.info-slide-content.traffic-report .description-top {
+  position: absolute;
+  width: 91%;
+  height: 115px;
+  color: #fff;
+  font-family: Frutiger;
+  font-size: 33px;
+  margin-top: 70px;
+  line-height: 40px;
+  text-shadow: 2px 2px 4px #000;
+  margin-left: 42.5px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
+  transform-origin: left;
+  overflow: hidden;
+  white-space: pre-wrap;
+  z-index: 388690;
+}
+.info-slide-content.traffic-report .thing-bot {
+  position: absolute;
+  margin-top: 225px;
+  width: 100%;
+}
+.info-slide-content.traffic-report .thing-bot .thing {
+  color: #fff;
+  font-family: Frutiger;
+  font-size: 33px;
+  text-shadow: 2px 2px 4px #000;
+  height: 35px;
+  width: 100%;
+  position: absolute;
+  padding-left: 68px;
+}
+.info-slide-content.traffic-report .thing-bot .thingbg {
+  position: absolute;
+  right: 0;
+  top: 470;
+  background: #241e95;
+  height: 45px;
+  width: 100%;
+  -webkit-mask-image: url(/images/newbg/frostpane.svg);
+  -webkit-mask-position: -72px -520px;
+  -webkit-mask-size: 1065px 1164px;
+  z-index: 0;
+}
+.info-slide-content.traffic-report .thing-bot .thingtext {
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  font-family: Frutiger;
+  font-size: 30px;
+  text-shadow: 2px 2px 4px #000;
+  height: 35px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-left: 25px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
+  overflow: hidden;
+  transform-origin: left;
+}
+.info-slide-content.traffic-report .frost-pane.bot {
+  position: absolute;
+  width: 100%;
+  height: 165px;
+  margin-top: 260px;
+  -webkit-mask-image: url(/images/newbg/frostpane.svg);
+  -webkit-mask-position: -72px -605px;
+  -webkit-mask-size: 1065px 1164px;
+  background-position: -79px -600px;
+}
+.info-slide-content.traffic-report .frost-pane.blank {
+  position: absolute;
+  width: 100%;
+  height: 210px;
+  margin-top: 215px;
+  -webkit-mask-image: url(/images/newbg/frostpane.svg);
+  -webkit-mask-position: -72px -605px;
+  -webkit-mask-size: 1065px 1300px;
+  background-position: -79px -568px;
+}
+.info-slide-content.traffic-report .impact-bot {
+  position: relative;
+  width: max-content;
+  color: #000;
+  background-color: #3DD135;
+  filter: drop-shadow(2.4px 2.4px 2.4px #000);
+  font-family: Frutiger;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 285px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  height: max-content;
+  margin-left: 47.5px;
+  transform-origin: left;
+  z-index: 388690;
+}
+.info-slide-content.traffic-report .description-bot {
+  position: absolute;
+  width: 91%;
+  height: 115px;
+  color: #fff;
+  font-family: Frutiger;
+  font-size: 33px;
+  margin-top: 285px;
+  line-height: 40px;
+  text-shadow: 2px 2px 4px #000;
+  margin-left: 42.5px;
+  transform-origin: left;
+  overflow: hidden;
+  white-space: pre-wrap;
+  z-index: 388690;
+}
+.info-slide-content.traffic-report .credit {
+  position: absolute;
+  font-family: Frutiger;
+  color: #ffff;
+  font-size: 22px;
+  margin-top: 440px;
+  text-shadow: 2px 2px 4px #000;
+  margin-left: 35px;
+}
 .info-slide-content.health-forecast {
-flex-direction: row;
+  flex-direction: row;
 }
 .info-slide-content.health-forecast .frost-pane {
   max-height: 411.25px;
@@ -2549,16 +2868,17 @@ flex-direction: row;
   top: 70px;
 }
 .info-slide-content.health-forecast .thing .thingtext {
-  width: 100%;
-  padding-left: 2.5px;
-  color: #fff;
-  font-family: Frutiger;
-  font-size: 33px;
-  padding-top: 4px;
-  text-shadow: 2px 2px 4px #000;
-  transform: scale(105%,100%);
-  padding-left: 62.5px;
-  transform-origin: left;
+	width: 100%;
+    padding-left: 2.5px;
+    color: #fff;
+    font-family: Frutiger;
+    font-size: 32px;
+    padding-top: 6px;
+    text-shadow: 2px 2px 4px #000;
+    transform: scale(100%, 100%);
+    padding-left: 62.5px;
+    transform-origin: left;
+    font-weight: bold;
 }
 .info-slide-content.health-forecast .thing .thingbg {
   position: absolute;
@@ -2587,46 +2907,52 @@ flex-direction: row;
   position: absolute;
 }
 .info-slide-content.health-forecast .frost-pane.mainforecast .low {
-  position: absolute;
-  top: 215px;
-  left: 65px;
-  font-size: 26.5px;
-  transform: scale(108%,100%);
-  transform-origin: left;
+	font-weight: bold;
+    position: absolute;
+    top: 214px;
+    left: 65px;
+    font-size: 27px;
+    transform: scale(100%, 100%);
+    transform-origin: left;
 }
 .info-slide-content.health-forecast .frost-pane.mainforecast .high {
-  position: absolute;
-  top: 215px;
-  right: 70px;
-  font-size: 26.5px;
-  transform: scale(108%,100%);
-  transform-origin: right;
+    position: absolute;
+    top: 214px;
+    right: 71px;
+    font-size: 27px;
+    transform: scale(100%, 100%);
+    transform-origin: right;
+    font-weight: bold;
 }
 .info-slide-content.health-forecast .frost-pane.mainforecast .lowtext {
-  width: 30%;
-  position: absolute;
-  top: 265px;
-  left: 39px;
-  font-size: 66px;
-  transform: scale(105%,100%);
-  text-align: center;
+	width: 30%;
+    position: absolute;
+    top: 265px;
+    left: 39px;
+    font-size: 66px;
+    transform: scale(105%, 100%);
+    text-align: center;
+    font-family: Frutiger;
+    font-weight: bold;
 }
 .info-slide-content.health-forecast .frost-pane.mainforecast .hightext {
-  width: 30%;
-  height: 47.5%;
-  position: absolute;
-  top: 265px;
-  right: 44px;
-  font-size: 66px;
-  transform: scale(105%,100%);
-  text-align: center;
+    width: 30%;
+    height: 48.5%;
+    position: absolute;
+    top: 265px;
+    right: 45px;
+    font-size: 69px;
+    /* transform: scale(101%, 100%); */
+    text-align: center;
+    font-family: Frutiger;
+    font-weight: bold;
 }
 .info-slide-content.health-forecast .frost-pane.mainforecast .title.heatwind {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   width: 100%;
   position: absolute;
   bottom: 12.5px;
-  font-size: 37.5px;
+  font-size: 0px;
   text-align: center;
   transform: scale(110.5%,100%);
   text-align: center;
@@ -2672,12 +2998,12 @@ flex-direction: row;
   left: 50px;
 }
 .info-slide-content.health-forecast .frost-pane.forecastdetails .chancepreciptext {
-  position: absolute;
-  top: 78px;
-  left: 95px;
-  font-size: 53px;
-  transform: scale(104.5%,100%);
-  transform-origin: left;
+    position: absolute;
+    top: 78px;
+    left: 95px;
+    font-size: 56px;
+    transform: scale(104.5%, 100%);
+    transform-origin: left;
 }
 .info-slide-content.health-forecast .frost-pane.forecastdetails .humidtext {
   position: absolute;
@@ -2688,12 +3014,12 @@ flex-direction: row;
   transform-origin: left;
 }
 .info-slide-content.health-forecast .frost-pane.forecastdetails .windtext {
-  position: absolute;
-  top: 352px;
-  left: 95px;
-  font-size: 53px;
-  transform: scale(104.5%,100%);
-  transform-origin: left;
+    position: absolute;
+    top: 352px;
+    left: 95px;
+    font-size: 56px;
+    /* transform: scale(104.5%, 100%); */
+    transform-origin: left;
 }
 .info-slide-content.allergy .leftpanel {
   max-height: 446.25px;
@@ -2738,8 +3064,9 @@ flex-direction: row;
   padding-top:4px;
   text-shadow: 2px 2px 4px #000;
   height: 35px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   transform-origin: left;
+  font-weight: bold;
     z-index: 1
 }
 .info-slide-content.allergy .frost-pane.pollen .thing span{
@@ -2753,10 +3080,10 @@ flex-direction: row;
   height: 50px;
 }
 .info-slide-content.allergy .frost-pane.pollen .pollenbar .type {
-  font-family: 'Frutiger 57 Condensed';
-  transform: scale(115%,100%) translate(0,-3.5px);
-  transform-origin: left;
-  font-size: 34px;
+    font-family: 'Frutiger Bold Cn';
+    transform: translate(2px, -7.5px);
+    transform-origin: left;
+    font-size: 35px;
 }
 .info-slide-content.allergy .frost-pane.pollen .pollenbar .treetype {
   font-size: 29px;
@@ -2768,18 +3095,17 @@ flex-direction: row;
   height: 50px;
   bottom: -19px;
   font-size: 25px;
-  color: #d8c422;
+  color: #ffd40e;
 }
 
 
 .info-slide-content.allergy .frost-pane.pollen .scale {
-  position: absolute;
-  font-family: 'Frutiger 57 Condensed';
-  font-size: 27.5px;
-  height: 50px;
-  bottom: -16px;
-  color: #d8c422;
-  transform: scale(117%,100%);
+    position: absolute;
+    font-family: 'Frutiger Bold Cn';
+    font-size: 30px;
+    height: 50px;
+    bottom: -16px;
+    color: #ffd40e;
 }
 .info-slide-content.allergy .frost-pane.pollen .scale.low {
   left: 227.5px;
@@ -2798,16 +3124,16 @@ flex-direction: row;
 }
 
 .info-slide-content.allergy .frost-pane.pollen .pollenbar .bar .bararrow {
-  position: absolute;
-  bottom: -5px;
-  left: -10px;
-  width: 0;
-  height: 0;
-  border-left: 14px solid transparent;
-  border-right: 14px solid transparent;
-  border-top: 34px solid #fff;
-  -webkit-filter: drop-shadow(4px 0 4px rgba(0, 0, 0, .75));
-  filter: drop-shadow(4px 0 4px rgba(0, 0, 0, .75))
+	position: absolute;
+    bottom: -5px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 34px solid #fff;
+    -webkit-filter: drop-shadow(4px 0 4px rgba(0, 0, 0, .75));
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, .75));
 }
 .info-slide-content.allergy .frost-pane.pollen .pollenbar.tree {
   top: 54px;
@@ -2828,7 +3154,7 @@ flex-direction: row;
   left: 232.5px;
 }
 .info-slide-content.allergy .frost-pane.pollen .pollenbar.mold {
-  top: 333px;
+  top: 325px;
   left: 27.5px;
 }
 .info-slide-content.allergy .rightpanel {
@@ -2850,18 +3176,18 @@ flex-direction: row;
   text-align: center;
 }
 .info-slide-content.allergy .rightpanel .thing .thingtext {
-  display: flex;
-  color: #fff;
-  font-family: 'Frutiger 57 Condensed';
-  font-size: 32.5px;
-  line-height: 125%;
-  text-shadow: 2px 2px 4px #000;
-  padding-left: 52.5px;
-  padding-top: 7.5px;
-  height: 35px;
-  text-shadow: #000 2px 2px 4px;
-  transform: scale(113.5%,100%);
-  transform-origin: left;
+	display: flex;
+    color: #fff;
+    font-family: 'Frutiger Bold Cn';
+    font-size: 32.5px;
+    line-height: 125%;
+    text-shadow: 2px 2px 4px #000;
+    padding-left: 60.5px;
+    padding-top: 7.5px;
+    height: 35px;
+    text-shadow: #141414 2.33807px 3.00663px 1.33711px;
+    transform: scale(100%, 100%);
+    transform-origin: left;
 }
 .info-slide-content.allergy .rightpanel .thing .thingbg {
   position: absolute;
@@ -2876,7 +3202,7 @@ flex-direction: row;
 }
 
 .info-slide-content.allergy .frost-pane.totalpollen .cat {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 61.5px;
   width: 92%;
   position: absolute;
@@ -2885,16 +3211,15 @@ flex-direction: row;
   transform: scale(114%,100%)
 }
 .info-slide-content.allergy .frost-pane.totalpollen .desc {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 42.5px;
   width: 92%;
   position: absolute;
   top: 170px;
   text-align: center;
-  transform: scale(115%,100%)
 }
 .info-slide-content.allergy .frost-pane.totalpollen .moreinfo {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 34px;
   width: 93%;
   line-height: 144%;
@@ -2931,7 +3256,7 @@ flex-direction: row;
   text-shadow: 2px 2px 4px #000;
   height: 35px;
   padding-left: 67.5px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   transform-origin: left;
 }
 .info-slide-content.Aches-Breath .frost-pane {
@@ -2951,17 +3276,17 @@ flex-direction: row;
 }
 .info-slide-content.Aches-Breath .frost-pane .whitetitle {
   font-size: 33px;
-  font-family: 'Frutiger 57 Condensed';
-  transform: scale(117%,100%);
+  font-family: 'Frutiger Bold Cn';
+  transform: scale(100%,100%);
   transform-origin: left;
 }
 .info-slide-content.Aches-Breath .frost-pane .desc {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 26.5px;
   color: #16bfdd;
   position: absolute;
   left: 20px;
-  transform: scale(117%,100%);
+  transform: scale(100%,100%);
   transform-origin: left;
 }
 .info-slide-content.Aches-Breath .frost-pane.aches .desc {
@@ -3020,7 +3345,7 @@ flex-direction: row;
   border-right: 15px solid transparent;
   border-top: 35px solid #fff;
   -webkit-filter: drop-shadow(4px 0 4px rgba(0, 0, 0, .75));
-  filter: drop-shadow(4px 0 4px rgba(0, 0, 0, .75));
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, .75));
 }
 .info-slide-content.Aches-Breath .frost-pane .bar .bararrowtext {
   font-family: Frutiger;
@@ -3072,8 +3397,9 @@ flex-direction: row;
   text-shadow: 2px 2px 4px #000;
   height: 35px;
   padding-left: 67.5px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
   transform-origin: left;
+  font-weight: bold;
 }
 .info-slide-content.allergy .frost-pane.airforecast .thing span{
   transform: scale(105%,100%);
@@ -3094,7 +3420,7 @@ flex-direction: row;
   transform: translate(0, 10px);
 }
 .info-slide-content.airquality .frost-pane.airforecast .bar .bar .forecast {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   position: absolute;
   left: 130px;
   top: 14px;
@@ -3113,7 +3439,7 @@ flex-direction: row;
   border-top: 32.5px solid #fff;
   transform: rotate(-90deg);
   -webkit-filter: drop-shadow(-4px 2px 4px rgba(0, 0, 0, .75));
-  filter: drop-shadow(-4px 2px 4px rgba(0, 0, 0, .75))
+  filter: drop-shadow(-4px 4px 0px rgba(0, 0, 0, .75))
 }
 .info-slide-content.airquality .rightpanel {
   margin-left: 5px;
@@ -3150,21 +3476,20 @@ flex-direction: row;
   position: absolute;
   width: 88%;
   color: #fff;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 35px;
   line-height: 115%;
   text-shadow: 2px 2px 4px #000;
   height: 90px;
   left: 0;
-  transform: scale(112.5%,100%);
   height: 35px;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
 }
 .info-slide-content.airquality .frost-pane.primarypolute .source {
   color: #fff;
-  font-family: 'Frutiger 57 condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 26px;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 1px #000;
   position: absolute;
   bottom: 11px;
   left: 32.5px;
@@ -3174,7 +3499,7 @@ flex-direction: row;
 .info-slide-content.airquality .frost-pane.primarypolute .ozoneaction {
   color: #fff;
   font-family: Frutiger;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 1px #000;
   position: absolute;
   bottom: 87.5px;
   left: 65px;
@@ -3182,14 +3507,13 @@ flex-direction: row;
 }
 .info-slide-content.airquality .frost-pane.primarypolute .pollutant {
   color: #fff;
-  font-family: 'Frutiger 57 condensed';
-  text-shadow: 2px 2px 4px #000;
+  font-family: 'Frutiger Bold Cn';
+  text-shadow: 2px 2px 1px #000;
   position: absolute;
   top: 58px;
   font-size: 42.5px;
   text-align: center;
   width: 89%;
-  transform: scale(113.5%,100%);
 }
 .info-slide-content.airquality .frost-pane.primarypolute .ozoneaction {
   background-image: url(/images/newbg/ozoneActionLogo.png);
@@ -3202,7 +3526,7 @@ flex-direction: row;
 .info-slide-content.airquality .frost-pane.primarypolute .ozoneaction .icon {
   color: #fff;
   font-family: Frutiger;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 1px #000;
   width: 100px;
   height: 80px;
   background: url(/images/yes2.svg);
@@ -3214,7 +3538,7 @@ flex-direction: row;
 .info-slide-content.airquality .frost-pane.primarypolute .ozoneaction .ozone{
   color: #fff;
   font-family: Frutiger;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 1px #000;
   font-weight: bold;
   font-style: italic;
   position: absolute;
@@ -3226,7 +3550,7 @@ flex-direction: row;
   color: #fff;
   font-family: Frutiger;
   font-size: 25px;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 1px #000;
   font-style: italic;
   position: absolute;
   left: 90px;
@@ -3301,7 +3625,7 @@ flex-direction: row;
   font-family: Frutiger;
   font-size: 30px;
   padding-top: 8px;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 1px #000;
   height: 42.5px;
   width: 100%;
   padding-left: 37.5px;
@@ -3321,9 +3645,10 @@ flex-direction: row;
   -webkit-mask-size: 1065px 1164px;
 }
 .info-slide-content.uvindex .thing .currentlytext {
-  font-size: 35px;
-  transform: scale(106%,100%);
-  transform-origin: left;
+	font-size: 35px;
+    transform: scale(100%, 100%);
+    transform-origin: left;
+    font-weight: bold;
 }
 .info-slide-content.uvindex .thing .uvtime {
   font-size: 35px;
@@ -3332,13 +3657,15 @@ flex-direction: row;
   width: 137.5px;
   text-align: center;
   padding-top: 8px;
+  font-weight: bold;
 }
 .info-slide-content.uvindex .thing .uvtime .uvday {
-  font-size: 28.5px;
-  position: absolute;
-  width: 100%;
-  top: 52px;
-  transform: scale(107%,100%);
+    font-size: 29px;
+    position: absolute;
+    width: 104%;
+    top: 53px;
+    /* transform: scale(107%, 100%); */
+    font-weight: bold;
 }
 .info-slide-content.uvindex .thing .uvtime.i {
   left: 244px;
@@ -3406,14 +3733,16 @@ flex-direction: row;
   text-align: center;
   width: 100%;
   transform: scale(106%,100%);
+  font-weight: bold;
 }
 .info-slide-content.uvindex .frost-pane.forecastuv .bar .num {
-  font-size: 54px;
-  position: absolute;
-  top: -48px;
-  text-align: center;
-  width: 100%;
-  transform: scale(107%,100%);
+	font-size: 54px;
+    position: absolute;
+    top: -57px;
+    text-align: center;
+    width: 100%;
+    /* transform: scale(107%, 100%); */
+    font-family: Frutiger Bold Cn;
 }
 .info-slide-content.uvindex .frost-pane.forecastuv .bar.i {
   left: 21px;
@@ -3429,7 +3758,7 @@ flex-direction: row;
   width: 15px;
   height: 175px;
   background-color: #fefd5d;
-  color: #d8c422;
+  color: #ffd40e;
   background: linear-gradient(to top, #555968 0, #686a79 12%, #898a99 24%, #876f50 36%, #baa936 48%, #e9d940 60%, #cb813f 72%, #d45d35 81%, #c23b36 92%, #c14c90 99%);
   bottom: 15px;
   left: 510px;
@@ -3523,7 +3852,7 @@ flex-direction: row;
   color: rgb(223, 69, 65);
 }
 .info-slide-content.healthtip .frost-pane {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   z-index: 0;
   padding-top: 16.5px;
   padding-left: 59px;
@@ -3546,24 +3875,27 @@ flex-direction: row;
   background-size: 955px 446px;
 }
 .info-slide-content.moreinfoimage .frost-pane .moreinfotext {
-  font-size: 32px;
-  line-height: 202%;
-  transform: scale(107%,100%);
-  transform-origin: right;
-  text-align: right;
-  position: absolute;
-  top: 30px;
-  right: 55px;
+	font-size: 32px;
+    line-height: 202%;
+    /* transform: scale(107%, 100%); */
+    transform-origin: right;
+    text-align: right;
+    position: absolute;
+    top: 30px;
+    right: 55px;
+    font-weight: bold;
 }
 .info-slide-content.teetime {
   flex-direction: row
 }
+
 .info-slide-content.teetime .thing {
   height: 35px;
   width: 100%;
   position: absolute;
   top: 70px;
 }
+
 .info-slide-content.teetime .thing .thingbg {
   position: absolute;
   right: 0;
@@ -3575,6 +3907,7 @@ flex-direction: row;
   -webkit-mask-position: -72px -329px;
   -webkit-mask-size: 1065px 1164px;
 }
+
 .info-slide-content.teetime .frost-pane {
   background-position: -72px -364px;
   max-height: 411.25px;
@@ -3583,11 +3916,13 @@ flex-direction: row;
   flex-direction: row;
   transform: translate(0px, 45px);
 }
+
 .info-slide-content.teetime .hour {
   width: 110px;
   align-items: center;
   margin-right: 44px;
 }
+
 .info-slide-content.teetime .hour.v {
   margin-right: 100px;
 }
@@ -3597,6 +3932,7 @@ flex-direction: row;
   width: 120px;
   transform: translate(0px, -35px);
 }
+
 .info-slide-content.teetime .hour .hourlabel .thingtext {
   color: #fff;
   font-family: Frutiger;
@@ -3604,11 +3940,12 @@ flex-direction: row;
   width: 120px;
   height: 100%;
   text-shadow: #000 1px 1px 3px;
-  transform: translate(0px, 0px) scale(105.5%,100%);
+  transform: translate(0px, 0px) scale(105.5%, 100%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .info-slide-content.teetime .daylabel {
   color: #fff;
   font-family: Frutiger;
@@ -3617,9 +3954,10 @@ flex-direction: row;
   top: 5px;
   position: absolute;
   text-shadow: #000 1px 1px 3px;
-  transform: translate(0px, 2.5px) scale(107%,100%);
+  transform: translate(0px, 2.5px) scale(107%, 100%);
   text-align: center;
 }
+
 .info-slide-content.teetime .tempbar {
   position: absolute;
   width: 120px;
@@ -3628,6 +3966,7 @@ flex-direction: row;
   background: linear-gradient(to top, #fffe21 0, #db5a14 100%);
   bottom: 17.5px
 }
+
 .info-slide-content.teetime .icon {
   width: 114px;
   height: 114px;
@@ -3639,6 +3978,7 @@ flex-direction: row;
   position: absolute;
   top: 38px
 }
+
 .info-slide-content.teetime .tempbar .temp {
   color: #fff;
   font-family: Frutiger;
@@ -3650,8 +3990,9 @@ flex-direction: row;
   text-align: center;
   transform: translate(0px, 15px);
   opacity: 1;
-  transform: scale(101%,100%);
+  transform: scale(101%, 100%);
 }
+
 .info-slide-content.teetime .tempbar .wind {
   color: #24346f;
   position: absolute;
@@ -3663,8 +4004,9 @@ flex-direction: row;
   text-align: center;
   bottom: 2.5px;
   opacity: 1;
-  transform: scale(104.5%,100%);
+  transform: scale(104.5%, 100%);
 }
+
 .info-slide-content.golfforecast .thing {
   height: 35px;
   width: 100%;
@@ -3672,6 +4014,7 @@ flex-direction: row;
   top: 70px;
   z-index: 388687;
 }
+
 .info-slide-content.golfforecast .thing .thingbg {
   position: absolute;
   right: 0;
@@ -3683,6 +4026,7 @@ flex-direction: row;
   -webkit-mask-position: -72px -329px;
   -webkit-mask-size: 1065px 1164px;
 }
+
 .info-slide-content.golfforecast .thing .thingtext {
   height: 35px;
   width: 100%;
@@ -3692,28 +4036,33 @@ flex-direction: row;
   padding-top: 5px;
   padding-left: 57px;
   text-shadow: 2px 2px 4px #000;
-  transform: scale(105%,100%);
+  transform: scale(105%, 100%);
   transform-origin: left;
 }
+
 .info-slide-content.golfforecast .frost-pane {
   max-height: 411.25px;
   transform: translate(0px, 45px);
   margin-left: 7px;
 }
+
 .info-slide-content.golfforecast .frost-pane.left {
   margin-left: 0px;
   max-width: 33%;
   padding-left: 31px;
   background-position: -72px -364px;
 }
+
 .info-slide-content.golfforecast .frost-pane.mid {
   max-width: 29.5%;
   background-position: -371px -364px;
 }
+
 .info-slide-content.golfforecast .frost-pane.right {
   width: 40%;
   background-position: -639px -364px;
 }
+
 .info-slide-content.golfforecast .frost-pane.left .purplefooter {
   width: 100%;
   position: absolute;
@@ -3721,6 +4070,7 @@ flex-direction: row;
   height: 122.5px;
   background: linear-gradient(to right, rgba(42, 58, 138, 0) 0, rgba(42, 58, 138, .281) 100%)
 }
+
 .info-slide-content.golfforecast .frost-pane.mid .purplefooter {
   width: 100%;
   position: absolute;
@@ -3728,6 +4078,7 @@ flex-direction: row;
   height: 122.5px;
   background: linear-gradient(to right, rgba(42, 58, 138, .287) 0, rgba(42, 58, 138, .534) 100%)
 }
+
 .info-slide-content.golfforecast .frost-pane.right .purplefooter {
   width: 100%;
   position: absolute;
@@ -3735,11 +4086,13 @@ flex-direction: row;
   height: 122.5px;
   background: linear-gradient(to right, rgba(42, 58, 138, .636) 0, rgba(42, 58, 138, .85) 100%)
 }
+
 .info-slide-content.golfforecast .forecontainer {
   position: absolute;
   width: 261px;
   height: 100%;
 }
+
 .info-slide-content.golfforecast .day {
   width: 100%;
   position: absolute;
@@ -3747,12 +4100,14 @@ flex-direction: row;
   font-family: Frutiger;
   color: #d8c422;
   font-size: 30px;
-  transform: scale(105%,100%);
+  transform: scale(105%, 100%);
   top: 14px;
 }
+
 .info-slide-content.golfforecast .icon {
   width: 179px;
   height: 179px;
+  position: absolute;
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-size: 3700% 95.65%;
@@ -3760,22 +4115,25 @@ flex-direction: row;
   top: 36px;
   left: -8px;
 }
+
 .info-slide-content.golfforecast .forecontainer .high {
   position: absolute;
   font-family: Frutiger;
   font-size: 61px;
   top: 65px;
   left: 165px;
-  transform: scale(101%,100%);
+  transform: scale(101%, 100%);
 }
+
 .info-slide-content.golfforecast .low {
   position: absolute;
   font-family: Frutiger;
   font-size: 61px;
   top: 134px;
   left: 165px;
-  transform: scale(101%,100%);
+  transform: scale(101%, 100%);
 }
+
 .info-slide-content.golfforecast .wind {
   position: absolute;
   font-family: Frutiger;
@@ -3783,19 +4141,21 @@ flex-direction: row;
   text-align: center;
   width: 100%;
   top: 245px;
-  transform: scale(105%,100%);
+  transform: scale(105%, 100%);
 }
+
 .info-slide-content.golfforecast .golfindex {
   width: 100%;
   position: absolute;
   font-family: Frutiger;
   color: #d8c422;
   font-size: 29.5px;
-  transform: scale(105.5%,100%);
+  transform: scale(105.5%, 100%);
   transform-origin: left;
   top: 305px;
   left: -8px;
 }
+
 .info-slide-content.golfforecast .bar {
   height: 25px;
   width: 205px;
@@ -3804,10 +4164,11 @@ flex-direction: row;
   right: 25px;
   background: linear-gradient(to right, #59523c 2%, #9b8c33 20%, #ccca36 40%, #9fbc44 60%, #4ba824 80%, #49844d 99%);
 }
+
 .info-slide-content.golfforecast .bar .bararrow {
   position: absolute;
   bottom: -5px;
-  left: -10px;
+  left: -15px;
   width: 0;
   height: 0;
   border-left: 15px solid transparent;
@@ -3816,18 +4177,20 @@ flex-direction: row;
   -webkit-filter: drop-shadow(4px 0 4px rgba(0, 0, 0, .75));
   filter: drop-shadow(4px 0 4px rgba(0, 0, 0, .75));
 }
+
 .info-slide-content.golfforecast .bar .bararrowtext {
   font-family: Frutiger;
   font-size: 30px;
   color: #fff;
   text-shadow: 0px 0px 0px;
   position: absolute;
-  top: -66px;
-  left: -79px;
+  top: -36px;
+  left: 26px;
   width: 150px;
   text-align: center;
-  transform: scale(105%,100%);
+  transform: scale(105%, 100%);
 }
+
 .info-slide-content.golfmoreinfoimage .frost-pane {
   background-color: rgba(0, 0, 0, 0);
   background: url(/images/newbg/golf_promo.png);
@@ -3835,11 +4198,12 @@ flex-direction: row;
   background-position: -19px 0;
   background-size: 958px 446px;
 }
+
 .info-slide-content.golfmoreinfoimage .frost-pane .moreinfotext {
   font-size: 33px;
   line-height: 202%;
   text-align: right;
-  transform: scale(110%,100%);
+  transform: scale(110%, 100%);
   transform-origin: right;
   position: absolute;
   top: 25px;
@@ -4086,7 +4450,7 @@ flex-direction: row;
   width: 100%;
   transform: scale(105%,100%);
   transform-origin: left;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
 }
 .info-slide-content.skireport .thing .thingtext .trails {
   font-size: 31px;
@@ -4163,8 +4527,199 @@ flex-direction: row;
   background-position: -72px -674px;
   transform: translate(0,0);
 }
-
-
+.info-slide.destinationmap-slide {
+  flex-direction: row;
+}
+.info-slide.destinationmap-slide .info-subheader {
+  z-index: 5;
+}
+.info-slides-content.destinationmap-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.blackmaplayer {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(16, 17, 17);
+}
+.destinationmap-content .tempunavailable {
+  z-index: 3;
+}
+.info-slides-content.destinationmap-content .travel-map {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.info-slides-content.destinationmap-content .travel-map img{
+  width: 100%;
+  transform: translate(-30px, -36px);
+  scale: 120%;
+}
+.info-slide.destinationmap-slide .travel-legend {
+  position: absolute;
+  top: 26px;
+  right: 45px;
+  text-align: right;
+  font-size: 28px;
+}
+.info-slide.destinationmap-slide .travel-legend .square {
+  width: 38px;
+  height: 24px;
+  margin-top: 5px;
+}
+.info-slide.destinationmap-slide .travel-legend .text {
+  padding-top: 10px;
+}
+.info-slide.destinationmap-slide .travel-legend .square.snow {
+  background-color: #d3d3cc;
+  margin-right: 76px;
+  position: absolute;
+  right: 0px;
+}
+.info-slide.destinationmap-slide .travel-legend .text.snow {
+  margin-right: 0px;
+  position: absolute;
+  right: 0px;
+}
+.info-slide.destinationmap-slide .travel-legend .text.mix {
+  margin-right: 132px;
+  position: absolute;
+  right: 0px;
+}
+.info-slide.destinationmap-slide .travel-legend .square.mix {
+  background-color: #e98dc0;
+  margin-right: 186px;
+  position: absolute;
+  right: 0px;
+}
+.info-slide.destinationmap-slide .travel-legend .text.icy {
+  margin-right: 242px;
+  position: absolute;
+  right: 0px;
+}
+.info-slide.destinationmap-slide .travel-legend .square.icy {
+  background-color: #f13779;
+  margin-right: 282px;
+  position: absolute;
+  right: 0px;
+}
+.info-slide.destinationmap-slide .travel-legend .text.scat {
+  margin-right: 338px;
+  position: absolute;
+  right: 0px;
+}
+.info-slide.destinationmap-slide .travel-legend .square.scat {
+  background-color: #3f662f;
+  margin-right: 382px;
+  position: absolute;
+  right: 0px;
+}
+.info-slide.destinationmap-slide .travel-legend .text.rain {
+  margin-right: 438px;
+  position: absolute;
+  right: 0px;
+}
+.info-slide.destinationmap-slide .travel-legend .square.rain {
+  background-color: #32ae33;
+  margin-right: 500px;
+  position: absolute;
+  right: 0px;
+}
+.info-slides-content.regionaldest-content .travel-map {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.info-slides-content.regionaldest-content .travel-map img{
+  position: absolute;
+  scale: 450%;
+  height: 100%;
+}
+.info-slides-content.regionaldest-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.info-slides-content.regionaldest-content .clusters {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+text-shadow: #000 2px 2px 1px;
+}
+.info-slides-content.regionaldest-content .clusters .cluster.one {
+  position: absolute;
+  right: 40%;
+  top: 0px;
+}
+.info-slides-content.regionaldest-content .clusters .cluster.two {
+  position: absolute;
+  right: 50%;
+  top: 0px;
+}
+.info-slides-content.regionaldest-content .clusters .cluster.three {
+  position: absolute;
+  right: 60%;
+  top: 0px;
+}
+.info-slides-content.regionaldest-content .clusters .cluster.four {
+  position: absolute;
+  right: 70%;
+  top: 0px;
+}
+.info-slides-content.regionaldest-content .clusters .cluster.five {
+  position: absolute;
+  right: 90%;
+  top: 0px;
+}
+.info-slides-content.regionaldest-content .clusters .cluster {
+  height: 140px;
+  width: 200px;
+}
+.info-slides-content.regionaldest-content .clusters .ctitle {
+  position: absolute;
+  font-family: "Frutiger";
+  color: #ebebeb;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: right;
+  width: 80%;
+  white-space: nowrap;
+  transform: scale(100%, 91%);
+}
+.info-slides-content.regionaldest-content .clusters .chigh {
+  position: absolute;
+  font-family: "Frutiger Bold CN";
+  color: #ffd40e;
+  font-size: 45px;
+  font-weight: bold;
+  top: 30%;
+  left: 15%;
+}
+.info-slides-content.regionaldest-content .clusters .cicon {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 3700% 95.65%;
+  background-position: 51.35% 77.5%;
+  width: 120px;
+  height: 120px;
+  bottom: 0px;
+  right: 0px;
+}
+.info-slide.destinationmap-slide {
+  flex-direction: row;
+}
 .info-slide-content.destinationforecast {
   flex-direction: column;
 }
@@ -4186,13 +4741,13 @@ flex-direction: row;
 .info-slide-content.destinationforecast .thing .thingtext {
   position: relative;
   top: -52.5px;
-  color: #d8c422;
+  color: #ffd40e;
   font-family: Frutiger;
   font-size: 27px;
   padding-top: 17px;
   height: 52.5px;
   width: 100%;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
 }
 .info-slide-content.destinationforecast .thing .thingtext .daytitle.i{
   position: absolute;
@@ -4229,6 +4784,7 @@ flex-direction: row;
 .info-slide-content.destinationforecast .frost-pane .cityname {
   position: absolute;
   top: 47.5px;
+  font-weight: bold;
   font-size: 36.5px;
   transform: scale(103.5%,100%);
   transform-origin: left;
@@ -4259,7 +4815,7 @@ flex-direction: row;
   right: 31px;
 }
 .info-slide-content.destinationforecast .hightemp {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 41px;
   position: absolute;
   top: 20px;
@@ -4275,7 +4831,7 @@ flex-direction: row;
   top: 19px;
 }
 .info-slide-content.destinationforecast .lowtemp {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 41px;
   position: absolute;
   top: 68px;
@@ -4336,13 +4892,13 @@ flex-direction: row;
 .info-slide-content.internationalforecast .thing .thingtext {
   position: relative;
   top: -52.5px;
-  color: #d8c422;
+  color: #ffd40e;
   font-family: Frutiger;
   font-size: 27px;
   padding-top: 17px;
   height: 52.5px;
   width: 100%;
-  text-shadow: #000 2px 2px 4px;
+  text-shadow: #141414 2.33807px 3.00663px 1.33711px;
 }
 .info-slide-content.internationalforecast .thing .thingtext .daytitle.i{
   position: absolute;
@@ -4410,7 +4966,7 @@ flex-direction: row;
   right: 31px;
 }
 .info-slide-content.internationalforecast .hightemp {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 41px;
   position: absolute;
   top: 20px;
@@ -4426,7 +4982,7 @@ flex-direction: row;
   top: 19px;
 }
 .info-slide-content.internationalforecast .lowtemp {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   font-size: 41px;
   position: absolute;
   top: 68px;
@@ -4476,28 +5032,29 @@ flex-direction: row;
 }
 .bulletin .cityname {
   font-family: Frutiger;
-  color: #d8c422;
+  color: #ffd40e;
   font-size: 36px;
   position: absolute;
   left: 50px;
   top: 16px;
   transform: scale(105%,100%);
   transform-origin: left;
+  font-weight: bold;
 }
 
 .bulletin .warnings {
-  font-family: 'Frutiger 57 condensed';
-  transform: scale(112.5%,100%);
-  transform-origin: left;
-  color: #fff;
-  font-size: 40px;
-  position: absolute;
-  left: 50px;
-  top: 62.5px;
-  line-height: 125%;
-  padding-right: 10px;
-  font-stretch: condensed;
-  white-space: pre;
+    font-family: 'Frutiger Bold Cn';
+    /* transform: scale(112.5%, 100%); */
+    transform-origin: left;
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    left: 50px;
+    top: 62.5px;
+    line-height: 125%;
+    padding-right: 10px;
+    font-stretch: condensed;
+    white-space: pre;
 }
 
 
@@ -4511,13 +5068,13 @@ a, body, div, h1, html, p {
 }
 
 html * {
-  : border-box;
+  box-sizing: border-box;
   font-size: 100%
 }
 
 body, html {
   height: 100%;
-  background-color: #000000;
+  background-color: #000;
   font-size: 100%
 }
 
@@ -4575,7 +5132,7 @@ body, html {
   position: relative;
   font-family: Frutiger;
   font-weight: 600;
-  color: #d8c422;
+  color: #ffd40e;
   font-size: 31.5px;
   letter-spacing: 1px;
   padding-top: 6px;
@@ -4585,7 +5142,7 @@ body, html {
   top: 170px;
   font-family: Frutiger;
   font-weight: 600;
-  color: #d8c422;
+  color: #ffd40e;
   font-size: 38px;
   letter-spacing: 1px;
   padding-top: 6px;
@@ -4887,14 +5444,15 @@ label{
 }
 
 .info-slides-header .hscroller {
-  position: relative;
-  display: inline-block;
-  transform-origin: left center;
-  top: 50%;
-  transform: scale(106%, 100%) translateY(-50%);
-  line-height: 23.5px;
-  font-family: Interstate;
-  font-size: 30px;
+    position: relative;
+    display: inline-block;
+    transform-origin: left center;
+    top: 50%;
+    transform: scale(100%, 100%) translateY(-50%);
+    line-height: 23.5px;
+    font-family: Interstate;
+    font-size: 30px;
+    font-weight: bold;
 }
 .info-slides-header .gradientthing {
   position: absolute;
@@ -4940,6 +5498,16 @@ label{
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+.travelmap-overlay {
+  position: absolute;
+  right:0;
+  width: 884.5px;
+  height: 520.82px;
+  z-index: 4;
+  background: transparent url(/images/newbg/map_travel_bg.png) no-repeat;
+  background-position: 69% 41.5%;
+  background-size: 120.3% 150.9%;
 }
 .radar-overlay {
   position: absolute;
@@ -5009,7 +5577,7 @@ label{
 }
 
 .info-slide .info-subheader {
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -5026,7 +5594,7 @@ label{
   justify-content: space-between;
   font-size: 40.5px;
   height: 60px;
-  text-shadow: 2px 2px 5px #000;
+  text-shadow: 2px 2px 1px ##141414;
   position: absolute;
   min-width: 20%;
   transform: scale(102.5%,100%);
@@ -5036,12 +5604,13 @@ label{
 .info-slide .info-subheader span {
   position: absolute;
   top: 50%;
-  transform: translateY(-42.5%)
+  transform: translateY(-42.5%);
+  font-weight: bold;
 }
 .subhead-title {
   position: absolute;
   top: 50%;
-  transform: translateY(-42.5%) scale(118%,100%) !important;
+  transform: translateY(-42.5%) scale(100%,100%) !important;
   transform-origin: left;
 }
 
@@ -5272,16 +5841,17 @@ label{
 }
 
 .info-slide .segment {
-  color: #fff;
-  font-family: 'Frutiger 57 Condensed';
-  font-size: 53px;
-  text-shadow: #000 2px 2px 2px;
-  position: absolute;
-  text-align: left;
-  right: 122.5px;
-  bottom: 70px;
-  transform: scale(129%,100%);
-  transform-origin: right;
+	color: #fff;
+    font-family: 'Frutiger';
+    font-size: 57px;
+    text-shadow: #000 2px 2px 0px;
+    position: absolute;
+    text-align: left;
+    right: 123.5px;
+    bottom: 73px;
+    transform: scale(100%, 100%);
+    transform-origin: right;
+    font-weight: bold;
 }
 @keyframes marqueeweatherscan {
   0% {transform: translate(0, 0);}
@@ -5345,6 +5915,38 @@ label{
 .health-slide-intro .accent.ix {
   background-color: #189cc5;
 }
+.traffic-slide-intro {
+  background: transparent url(/images/newbg/traffic_intro_bg.png) no-repeat bottom;
+  background-size: 1068px 788px;
+  background-position: -127px -112px;
+}
+.traffic-slide-intro .accent.i {
+  background-color: #c68631;
+}
+.traffic-slide-intro .accent.ii {
+  background-color: #ae7624;
+}
+.traffic-slide-intro .accent.iii {
+  background-color: #c68631;
+}
+.traffic-slide-intro .accent.iv {
+  background-color: #c68631;
+}
+.traffic-slide-intro .accent.v {
+  background-color: #de932a;
+}
+.traffic-slide-intro .accent.vi {
+  background-color: #c68631;
+}
+.traffic-slide-intro .accentvii {
+  background-color: #de932a;
+}
+.traffic-slide-intro .accent.viii {
+  background-color: #ae7624;
+}
+.traffic-slide-intro .accent.ix {
+  background-color: #c68631;
+}
 .beach-slide-intro {
   background: transparent url(/images/newbg/boatbeach_intro_bg.png) no-repeat bottom;
   background-size: 1068px 788px;
@@ -5382,7 +5984,7 @@ label{
   opacity: .3;
 }
 .golf-slide-intro {
-  background: transparent url(/images/newbg/boatbeach_intro_bg.png) no-repeat bottom;
+  background: transparent url(/images/newbg/golf_intro_bg.png) no-repeat bottom;
   background-size: 1068px 788px;
   background-position: -127px -112px;
 }
@@ -5532,14 +6134,15 @@ label{
 .city-slide-intro .segment {
   color: #fff;
   font-family: Frutiger;
-  font-size: 57.5px;
+  font-size: 58.5px;
   text-shadow: #000 0px 0px 0px;
   position: absolute;
   text-align: left;
   left: 140px;
   bottom: 38px;
-  transform: scale(106.5%,100%);
+  transform: scale(100%,100%);
   transform-origin: left;
+  font-weight: 700;
 }
 @keyframes citymarqueeweatherscan {
   0% {transform: translate(0, 0);}
@@ -5564,7 +6167,7 @@ label{
 }
 .city-slide-intro .cityweatherscanmarquee span {
   display: block;
-  transform: scale(106%,100%);
+  transform: scale(106%,106%);
 }
 .city-slide-intro {
   background: transparent url(/images/puente-internacional-weatherscan-image.png) no-repeat bottom;
@@ -5588,11 +6191,12 @@ label{
   padding-right: 10px;
   padding-top: 10px;
   line-height: 110%;
-  z-index: 101
+  z-index: 101;
+  font-weight: bold;
 }
 .city-slide-intro .weatherscancopyright span{
   display: block;
-  transform: scale(107%,100%);
+  transform: translate(5px, 0px);
   transform-origin: left;
 }
 @keyframes cityaccentmovei {
@@ -5761,6 +6365,12 @@ label{
   background-size: 120.3% 150.9%;
 }
 
+.traffic {
+  background: transparent url(/images/newbg/traffic_bg.png) no-repeat;
+  background-position: 69% 41.5%;
+  background-size: 120.3% 150.9%;
+}
+
 .golf {
   background: transparent url(/images/newbg/golf_bg.png) no-repeat;
   background-position: 69% 41.5%;
@@ -5809,9 +6419,10 @@ label{
   transform-origin: right;
 }
 .pastlegend {
-  font-size: 26px;
-  transform: translate(0,-2.5px) scale(92.5%,100%);
-  transform-origin: right;
+    font-size: 26px;
+    transform: translate(0, -2.5px) scale(100%, 100%);
+    transform-origin: right;
+    font-weight: bold;
 }
 .radar-legends {
   display: flex;
@@ -5851,7 +6462,7 @@ label{
   font-weight: 700;
   text-shadow: none;
   text-align: right;
-  color: #fff;
+  color: #ffffff;
 }
 
 #date-time {
@@ -6045,7 +6656,7 @@ label{
   color: #D4D4D4;
   font-size: 23.5px;
   padding: 07px 14px 0 0;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 1px #000;
   line-height: 125%;
   z-index: 5;
   background: linear-gradient(to right, #3f3f3f 0, #242424 100%);
@@ -6073,7 +6684,7 @@ label{
   width: 66.87%;
   right: 0;
   top: 63.05%;
-  background: #8cadd1;
+  background: #f39c0a;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .35)
 }
 .forecast-header {
@@ -6115,7 +6726,7 @@ label{
 }
 
 #forecast-text {
-  color: #171717;
+  color: #ffffff;
   position: absolute;
   padding: 1.1% .75%;
   padding-right: 11.5%;
@@ -6168,7 +6779,7 @@ label{
 .forecast-tile {
   position: relative;
   background: #5681be;
-  background: linear-gradient(to right, #5783cc 0, #c4d9ff 100%)
+  background: linear-gradient(to right, #d98c1f 0, #c65149 100%)
 }
 
 
@@ -6256,7 +6867,7 @@ label{
   font-size: 48px
 }
 .forecast-tile.daily .high {
-  color: #171717;
+  color: #ffffff;
   top: 32%;
   font-weight: 800;
   font-size: 47px;
@@ -6303,7 +6914,7 @@ label{
   z-index: 1
 }
 .forecast-tile.hourly .high {
-  color: #171717;
+  color: #ffffff;
   font-family: Interstate;
   top: 0px;
   position: relative;
@@ -6420,11 +7031,11 @@ label{
 }
 #marquee1 span {
   font-family: 'Interstate Mono';
-  padding-right: 3vw;
+  padding-right: 3vw
 }
 
 #marquee2 {
-  color: #fff;
+  color: #000000;
   position: absolute;
   left: 31.35%;
   top: 87.2%;
@@ -6451,7 +7062,7 @@ label{
   height: 43px;
   margin-top: 2px;
   font-size: 34.5px;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 1px #000;
   padding-top: .15%;
   background-color: #d51e08;
   background: linear-gradient(to right, #d51e08 0, #b41a08 100%);
@@ -6468,7 +7079,7 @@ label{
 
 .info-slide .info-subheadershadowfix {
   font-weight: 400;
-  font-family: 'Frutiger 57 Condensed';
+  font-family: 'Frutiger Bold Cn';
   color: #fff;
   display: flex;
   flex-flow: row nowrap;
@@ -6488,12 +7099,13 @@ label{
 
 
 .info-slide .info-subheadershadowfix span {
-  position: absolute;
-  top: 50.8%;
-  transform: translateY(-42.5%) scale(116%,100%);
-  transform-origin: left;
-  left: 7px;
-  width: 250%;
+    position: absolute;
+    top: 44%;
+    transform: translateY(-42.5%) scale(116%, 100%);
+    transform-origin: left;
+    left: 7px;
+    width: 197%;
+    font-size: 41px;
 }
 
 
@@ -6506,10 +7118,10 @@ label{
   font-family: Frutiger;
   font-size: 31px;
   padding-top: 0px;
-  transform: translateY(-43.5%) scale(105.9%,100%);
+  transform: translateY(-45.5%) scale(102.9%, 100%);
   transform-origin: right;
-  right: 90px;
-  font-stretch: semi-expanded;
+  right: 94px;
+  font-weight: bold;
 }
 
 .bulletin {
@@ -6534,7 +7146,7 @@ label{
 
 #marqueeSevere {
   font-family: 'Interstate';
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 1px #000;
   font-weight: 400;
   position: absolute;
   left: 451px;
@@ -6554,7 +7166,7 @@ label{
 }
 #marqueeSevere div{
   font-family: 'Interstate2';
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 1px #000;
   font-synthesis: weight;
   font-weight: 600;
   font-size: 44.5px;

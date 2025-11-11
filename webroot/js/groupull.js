@@ -71,6 +71,7 @@ function MarqueeMan() {
 				$('.marqueeheadersevere').css("color","#DDDDDD")
 				$('.marqueeheadersevere').css("text-shadow","2px 2px 4px #000")
 			}
+			
 			$('.marqueeheadersevere').text((weatherInfo.bulletin.marqueewarnings[0].name).toUpperCase() + ' ' + weatherInfo.bulletin.marqueewarnings[0].status)
 			$('#arrow-img').fadeOut(0)
 			$('#marqueeSevere').fadeIn(0)
